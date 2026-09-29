@@ -1,5 +1,2157 @@
 {
-  "source": "TSE Dados Abertos — arquivo será gerado pela atualização automática",
-  "updatedAt": null,
-  "candidates": []
+  "source": "Tribunal Superior Eleitoral — Dados Abertos, Candidatos 2026",
+  "sourceUrl": "https://dadosabertos.tse.jus.br/dataset/candidatos-2026",
+  "updatedAt": "2026-09-29T17:50:21.785409+00:00",
+  "candidates": [
+    {
+      "id": "10002532492",
+      "office": "governor",
+      "state": "AC",
+      "name": "ALAN RICK",
+      "number": "10",
+      "party": "REPUBLICANOS",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "10002544107",
+      "office": "governor",
+      "state": "AC",
+      "name": "MAILZA ASSIS",
+      "number": "11",
+      "party": "PP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "10002549500",
+      "office": "governor",
+      "state": "AC",
+      "name": "EUDO RAFFAEL",
+      "number": "21",
+      "party": "PCB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "10002533539",
+      "office": "governor",
+      "state": "AC",
+      "name": "DR.LUISINHO",
+      "number": "36",
+      "party": "AGIR",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "10002550719",
+      "office": "governor",
+      "state": "AC",
+      "name": "THOR DANTAS",
+      "number": "40",
+      "party": "PSB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "10002544015",
+      "office": "governor",
+      "state": "AC",
+      "name": "TIÃO BOCALOM",
+      "number": "45",
+      "party": "PSDB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "20002553745",
+      "office": "governor",
+      "state": "AL",
+      "name": "RENAN FILHO",
+      "number": "15",
+      "party": "MDB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "20002552502",
+      "office": "governor",
+      "state": "AL",
+      "name": "MÁRCIO JAMBO",
+      "number": "35",
+      "party": "DEMOCRATA",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "20002553350",
+      "office": "governor",
+      "state": "AL",
+      "name": "JHC",
+      "number": "45",
+      "party": "PSDB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "20002539642",
+      "office": "governor",
+      "state": "AL",
+      "name": "LENILDA LUNA",
+      "number": "80",
+      "party": "UP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "40002535267",
+      "office": "governor",
+      "state": "AM",
+      "name": "GILBERTO VASCONCELOS",
+      "number": "16",
+      "party": "PSTU",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "40002550776",
+      "office": "governor",
+      "state": "AM",
+      "name": "ISAEL MUNDURUKU",
+      "number": "18",
+      "party": "REDE",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "40002541626",
+      "office": "governor",
+      "state": "AM",
+      "name": "PROFESSORA MARIA DO CARMO",
+      "number": "22",
+      "party": "PL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "40002551740",
+      "office": "governor",
+      "state": "AM",
+      "name": "CABO DACIOLO",
+      "number": "33",
+      "party": "MOBILIZA",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "40002541741",
+      "office": "governor",
+      "state": "AM",
+      "name": "ROBERTO CIDADE",
+      "number": "44",
+      "party": "UNIÃO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "40002532272",
+      "office": "governor",
+      "state": "AM",
+      "name": "OMAR AZIZ",
+      "number": "55",
+      "party": "PSD",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "40002536086",
+      "office": "governor",
+      "state": "AM",
+      "name": "DAVID ALMEIDA",
+      "number": "70",
+      "party": "AVANTE",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "30002536313",
+      "office": "governor",
+      "state": "AP",
+      "name": "CARLOS CLEY",
+      "number": "16",
+      "party": "PSTU",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "30002552017",
+      "office": "governor",
+      "state": "AP",
+      "name": "DELEGADO MARCOS",
+      "number": "27",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "30002551388",
+      "office": "governor",
+      "state": "AP",
+      "name": "JAIRO PALHETA",
+      "number": "29",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "30002536311",
+      "office": "governor",
+      "state": "AP",
+      "name": "CLÉCIO",
+      "number": "44",
+      "party": "UNIÃO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "30002530014",
+      "office": "governor",
+      "state": "AP",
+      "name": "DR. FURLAN",
+      "number": "55",
+      "party": "PSD",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "50002536314",
+      "office": "governor",
+      "state": "BA",
+      "name": "JERÔNIMO RODRIGUES",
+      "number": "13",
+      "party": "PT",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "50002535253",
+      "office": "governor",
+      "state": "BA",
+      "name": "ARIEL CAPISTRANO",
+      "number": "27",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "50002536579",
+      "office": "governor",
+      "state": "BA",
+      "name": "ESTÊVÃO",
+      "number": "27",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "50002552489",
+      "office": "governor",
+      "state": "BA",
+      "name": "MARIA BONA",
+      "number": "29",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "50002533190",
+      "office": "governor",
+      "state": "BA",
+      "name": "ACM NETO",
+      "number": "44",
+      "party": "UNIÃO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "50002532269",
+      "office": "governor",
+      "state": "BA",
+      "name": "RONALDO MANSUR",
+      "number": "50",
+      "party": "PSOL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "50002544692",
+      "office": "governor",
+      "state": "BA",
+      "name": "AROLDO FELIX",
+      "number": "80",
+      "party": "UP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "60002543969",
+      "office": "governor",
+      "state": "CE",
+      "name": "ELMANO DE FREITAS",
+      "number": "13",
+      "party": "PT",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "60002540417",
+      "office": "governor",
+      "state": "CE",
+      "name": "DELEGADO HUGGO",
+      "number": "14",
+      "party": "MISSÃO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "60002549967",
+      "office": "governor",
+      "state": "CE",
+      "name": "ZÉ BATISTA",
+      "number": "16",
+      "party": "PSTU",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "60002552320",
+      "office": "governor",
+      "state": "CE",
+      "name": "IERI BRAGA",
+      "number": "29",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "60002540336",
+      "office": "governor",
+      "state": "CE",
+      "name": "PEDRO BRITO",
+      "number": "30",
+      "party": "NOVO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "60002553922",
+      "office": "governor",
+      "state": "CE",
+      "name": "VERA LÚCIA",
+      "number": "30",
+      "party": "NOVO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "60002552498",
+      "office": "governor",
+      "state": "CE",
+      "name": "DANILO SOARES",
+      "number": "35",
+      "party": "DEMOCRATA",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "60002531351",
+      "office": "governor",
+      "state": "CE",
+      "name": "CIRO GOMES",
+      "number": "45",
+      "party": "PSDB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "60002533729",
+      "office": "governor",
+      "state": "CE",
+      "name": "SERLEY LEAL",
+      "number": "80",
+      "party": "UP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "70002553055",
+      "office": "governor",
+      "state": "DF",
+      "name": "CELINA LEÃO",
+      "number": "11",
+      "party": "PP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "70002552496",
+      "office": "governor",
+      "state": "DF",
+      "name": "LEANDRO GRASS",
+      "number": "13",
+      "party": "PT",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "70002535930",
+      "office": "governor",
+      "state": "DF",
+      "name": "PROFESSOR ROBSON",
+      "number": "16",
+      "party": "PSTU",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "70002553982",
+      "office": "governor",
+      "state": "DF",
+      "name": "RICO PINHEIRO",
+      "number": "28",
+      "party": "PRTB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "70002552341",
+      "office": "governor",
+      "state": "DF",
+      "name": "EXPEDITO MENDONÇA",
+      "number": "29",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "70002547775",
+      "office": "governor",
+      "state": "DF",
+      "name": "KIKO CAPUTO",
+      "number": "30",
+      "party": "NOVO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "70002551298",
+      "office": "governor",
+      "state": "DF",
+      "name": "ELISSON",
+      "number": "36",
+      "party": "AGIR",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "70002551557",
+      "office": "governor",
+      "state": "DF",
+      "name": "CAPPELLI",
+      "number": "40",
+      "party": "PSB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "70002552965",
+      "office": "governor",
+      "state": "DF",
+      "name": "PAULA BELMONTE",
+      "number": "45",
+      "party": "PSDB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "70002552586",
+      "office": "governor",
+      "state": "DF",
+      "name": "ARRUDA",
+      "number": "55",
+      "party": "PSD",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "70002537111",
+      "office": "governor",
+      "state": "DF",
+      "name": "PROFESSORA SAMARA MINEIRO",
+      "number": "80",
+      "party": "UP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "80002552682",
+      "office": "governor",
+      "state": "ES",
+      "name": "LORENZO PAZOLINI",
+      "number": "10",
+      "party": "REPUBLICANOS",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "80002551833",
+      "office": "governor",
+      "state": "ES",
+      "name": "HELDER SALOMÃO",
+      "number": "13",
+      "party": "PT",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "80002541012",
+      "office": "governor",
+      "state": "ES",
+      "name": "BRENO BARCELOS",
+      "number": "14",
+      "party": "MISSÃO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "80002552172",
+      "office": "governor",
+      "state": "ES",
+      "name": "RICARDO FERRAÇO",
+      "number": "15",
+      "party": "MDB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "80002550832",
+      "office": "governor",
+      "state": "ES",
+      "name": "RAFAEL DEMUNER",
+      "number": "80",
+      "party": "UP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "90002545476",
+      "office": "governor",
+      "state": "GO",
+      "name": "LUIS CESAR BUENO",
+      "number": "13",
+      "party": "PT",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "90002540993",
+      "office": "governor",
+      "state": "GO",
+      "name": "DANIEL VILELA",
+      "number": "15",
+      "party": "MDB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "90002551791",
+      "office": "governor",
+      "state": "GO",
+      "name": "WILDER MORAIS",
+      "number": "22",
+      "party": "PL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "90002553733",
+      "office": "governor",
+      "state": "GO",
+      "name": "DANILO DA SILVA",
+      "number": "29",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "90002543463",
+      "office": "governor",
+      "state": "GO",
+      "name": "MARCONI PERILLO",
+      "number": "45",
+      "party": "PSDB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "90002550707",
+      "office": "governor",
+      "state": "GO",
+      "name": "LUCIANA AMORIM",
+      "number": "80",
+      "party": "UP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "100002542556",
+      "office": "governor",
+      "state": "MA",
+      "name": "FELIPE CAMARÃO",
+      "number": "13",
+      "party": "PT",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "100002544076",
+      "office": "governor",
+      "state": "MA",
+      "name": "ANDRÉ LUIS",
+      "number": "14",
+      "party": "MISSÃO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "100002543869",
+      "office": "governor",
+      "state": "MA",
+      "name": "ORLEANS BRANDÃO",
+      "number": "15",
+      "party": "MDB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "100002534190",
+      "office": "governor",
+      "state": "MA",
+      "name": "SAULO ARCANGELI",
+      "number": "16",
+      "party": "PSTU",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "100002544073",
+      "office": "governor",
+      "state": "MA",
+      "name": "REGINALDO LIMA",
+      "number": "21",
+      "party": "PCB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "100002551399",
+      "office": "governor",
+      "state": "MA",
+      "name": "ROBERTO ROCHA",
+      "number": "28",
+      "party": "PRTB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "100002552700",
+      "office": "governor",
+      "state": "MA",
+      "name": "DIMAS CASSIMIRO",
+      "number": "29",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "100002545679",
+      "office": "governor",
+      "state": "MA",
+      "name": "EDUARDO BRAIDE",
+      "number": "55",
+      "party": "PSD",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "130002552296",
+      "office": "governor",
+      "state": "MG",
+      "name": "CLEITINHO AZEVEDO",
+      "number": "10",
+      "party": "REPUBLICANOS",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "130002539775",
+      "office": "governor",
+      "state": "MG",
+      "name": "ALEXANDRE KALIL",
+      "number": "12",
+      "party": "PDT",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "130002550464",
+      "office": "governor",
+      "state": "MG",
+      "name": "PATRUS ANANIAS",
+      "number": "13",
+      "party": "PT",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "130002544411",
+      "office": "governor",
+      "state": "MG",
+      "name": "BEN MENDES",
+      "number": "14",
+      "party": "MISSÃO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "130002549557",
+      "office": "governor",
+      "state": "MG",
+      "name": "GABRIEL",
+      "number": "15",
+      "party": "MDB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "130002546802",
+      "office": "governor",
+      "state": "MG",
+      "name": "RAFAEL DUDA",
+      "number": "16",
+      "party": "PSTU",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "130002544122",
+      "office": "governor",
+      "state": "MG",
+      "name": "PROFESSOR TÚLIO LOPES",
+      "number": "21",
+      "party": "PCB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "130002550834",
+      "office": "governor",
+      "state": "MG",
+      "name": "FLÁVIO ROSCOE",
+      "number": "22",
+      "party": "PL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "130002552308",
+      "office": "governor",
+      "state": "MG",
+      "name": "HENRIQUE ÁREAS",
+      "number": "29",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "130002541911",
+      "office": "governor",
+      "state": "MG",
+      "name": "MATEUS SIMÕES",
+      "number": "55",
+      "party": "PSD",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "130002547874",
+      "office": "governor",
+      "state": "MG",
+      "name": "INDIRA XAVIER",
+      "number": "80",
+      "party": "UP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "120002536582",
+      "office": "governor",
+      "state": "MS",
+      "name": "EDUARDO RIEDEL",
+      "number": "11",
+      "party": "PP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "120002539834",
+      "office": "governor",
+      "state": "MS",
+      "name": "FÁBIO TRAD",
+      "number": "13",
+      "party": "PT",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "120002552155",
+      "office": "governor",
+      "state": "MS",
+      "name": "DELCIDIO AMARAL",
+      "number": "25",
+      "party": "PRD",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "120002549681",
+      "office": "governor",
+      "state": "MS",
+      "name": "ECONOMISTA RENATO GOMES",
+      "number": "27",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "120002552201",
+      "office": "governor",
+      "state": "MS",
+      "name": "DANIEL LEMES",
+      "number": "29",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "120002552191",
+      "office": "governor",
+      "state": "MS",
+      "name": "JOÃO HENRIQUE CATAN",
+      "number": "30",
+      "party": "NOVO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "120002550198",
+      "office": "governor",
+      "state": "MS",
+      "name": "JEFERSON BEZERRA",
+      "number": "36",
+      "party": "AGIR",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "120002532257",
+      "office": "governor",
+      "state": "MS",
+      "name": "LUCIEN REZENDE",
+      "number": "50",
+      "party": "PSOL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "110002551480",
+      "office": "governor",
+      "state": "MT",
+      "name": "OTAVIANO PIVETTA",
+      "number": "10",
+      "party": "REPUBLICANOS",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "110002543953",
+      "office": "governor",
+      "state": "MT",
+      "name": "RAFAELL MILAS",
+      "number": "14",
+      "party": "MISSÃO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "110002551737",
+      "office": "governor",
+      "state": "MT",
+      "name": "WELLINGTON FAGUNDES",
+      "number": "22",
+      "party": "PL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "110002553058",
+      "office": "governor",
+      "state": "MT",
+      "name": "MAURICIO COELHO",
+      "number": "33",
+      "party": "MOBILIZA",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "110002554073",
+      "office": "governor",
+      "state": "MT",
+      "name": "SARGENTO LAUDICÉRIO",
+      "number": "36",
+      "party": "AGIR",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "110002553937",
+      "office": "governor",
+      "state": "MT",
+      "name": "SARGENTO LAUDICÉRIO (LAU)",
+      "number": "36",
+      "party": "AGIR",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "110002544985",
+      "office": "governor",
+      "state": "MT",
+      "name": "DOUTORA NATASHA",
+      "number": "55",
+      "party": "PSD",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "140002551598",
+      "office": "governor",
+      "state": "PA",
+      "name": "HANA GHASSAN",
+      "number": "15",
+      "party": "MDB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "140002538631",
+      "office": "governor",
+      "state": "PA",
+      "name": "CLEBER RABELO",
+      "number": "16",
+      "party": "PSTU",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "140002554108",
+      "office": "governor",
+      "state": "PA",
+      "name": "WELL MACEDO",
+      "number": "16",
+      "party": "PSTU",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "140002549930",
+      "office": "governor",
+      "state": "PA",
+      "name": "DR. DANIEL",
+      "number": "20",
+      "party": "PODE",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "140002551357",
+      "office": "governor",
+      "state": "PA",
+      "name": "JOSÉ MOITA",
+      "number": "35",
+      "party": "DEMOCRATA",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "140002554434",
+      "office": "governor",
+      "state": "PA",
+      "name": "RUTH REIS",
+      "number": "35",
+      "party": "DEMOCRATA",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "140002542386",
+      "office": "governor",
+      "state": "PA",
+      "name": "ARACELI",
+      "number": "50",
+      "party": "PSOL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "140002551943",
+      "office": "governor",
+      "state": "PA",
+      "name": "GAL LEITE",
+      "number": "80",
+      "party": "UP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "150002551789",
+      "office": "governor",
+      "state": "PB",
+      "name": "LUCAS RIBEIRO",
+      "number": "11",
+      "party": "PP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "150002544133",
+      "office": "governor",
+      "state": "PB",
+      "name": "CÍCERO LUCENA",
+      "number": "15",
+      "party": "MDB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "150002538692",
+      "office": "governor",
+      "state": "PB",
+      "name": "EFRAIM FILHO",
+      "number": "22",
+      "party": "PL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "150002551911",
+      "office": "governor",
+      "state": "PB",
+      "name": "PEDRO COUTINHO",
+      "number": "27",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "150002552603",
+      "office": "governor",
+      "state": "PB",
+      "name": "CAMILO DUARTE",
+      "number": "29",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "150002540204",
+      "office": "governor",
+      "state": "PB",
+      "name": "YURI EZEQUIEL",
+      "number": "80",
+      "party": "UP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "170002540337",
+      "office": "governor",
+      "state": "PE",
+      "name": "RENAN",
+      "number": "14",
+      "party": "MISSÃO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "170002536575",
+      "office": "governor",
+      "state": "PE",
+      "name": "GUILHERME FONSECA",
+      "number": "16",
+      "party": "PSTU",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "170002552776",
+      "office": "governor",
+      "state": "PE",
+      "name": "VICTOR ASSIS",
+      "number": "29",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "170002541258",
+      "office": "governor",
+      "state": "PE",
+      "name": "PROFESSOR JEREMIAS DO BANCO",
+      "number": "35",
+      "party": "DEMOCRATA",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "170002537230",
+      "office": "governor",
+      "state": "PE",
+      "name": "JOÃO CAMPOS",
+      "number": "40",
+      "party": "PSB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "170002538097",
+      "office": "governor",
+      "state": "PE",
+      "name": "IVAN MORAES",
+      "number": "50",
+      "party": "PSOL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "170002537227",
+      "office": "governor",
+      "state": "PE",
+      "name": "RAQUEL LYRA",
+      "number": "55",
+      "party": "PSD",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "170002537320",
+      "office": "governor",
+      "state": "PE",
+      "name": "PROFESSORA CAMILA",
+      "number": "80",
+      "party": "UP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "180002538530",
+      "office": "governor",
+      "state": "PI",
+      "name": "JOEL RODRIGUES",
+      "number": "11",
+      "party": "PP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "180002532987",
+      "office": "governor",
+      "state": "PI",
+      "name": "RAFAEL FONTELES",
+      "number": "13",
+      "party": "PT",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "180002537422",
+      "office": "governor",
+      "state": "PI",
+      "name": "GERALDO CARVALHO",
+      "number": "16",
+      "party": "PSTU",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "180002548565",
+      "office": "governor",
+      "state": "PI",
+      "name": "PROFESSOR JURITY",
+      "number": "27",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "180002553722",
+      "office": "governor",
+      "state": "PI",
+      "name": "LOURDES MELO",
+      "number": "29",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "180002549920",
+      "office": "governor",
+      "state": "PI",
+      "name": "ELIZEU AGUIAR",
+      "number": "30",
+      "party": "NOVO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "180002548388",
+      "office": "governor",
+      "state": "PI",
+      "name": "RAVENNA DA INCLUSÃO",
+      "number": "35",
+      "party": "DEMOCRATA",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "180002544216",
+      "office": "governor",
+      "state": "PI",
+      "name": "DRA. LÚCIA SANTOS",
+      "number": "45",
+      "party": "PSDB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "180002549970",
+      "office": "governor",
+      "state": "PI",
+      "name": "PROFESSOR GISVALDO",
+      "number": "50",
+      "party": "PSOL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "180002550421",
+      "office": "governor",
+      "state": "PI",
+      "name": "GUSTAVO PELO PIAUÍ OU GUSTAVO",
+      "number": "70",
+      "party": "AVANTE",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "180002549995",
+      "office": "governor",
+      "state": "PI",
+      "name": "SANTIAGO BELIZÁRIO",
+      "number": "80",
+      "party": "UP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "160002547666",
+      "office": "governor",
+      "state": "PR",
+      "name": "REQUIÃO FILHO",
+      "number": "12",
+      "party": "PDT",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "160002551353",
+      "office": "governor",
+      "state": "PR",
+      "name": "LUIZ FRANÇA",
+      "number": "14",
+      "party": "MISSÃO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "160002548010",
+      "office": "governor",
+      "state": "PR",
+      "name": "SAMUEL DE MATTOS",
+      "number": "16",
+      "party": "PSTU",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "160002540833",
+      "office": "governor",
+      "state": "PR",
+      "name": "SERGIO MORO",
+      "number": "22",
+      "party": "PL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "160002552560",
+      "office": "governor",
+      "state": "PR",
+      "name": "ADRIANO FUNILEIRO",
+      "number": "29",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "160002547594",
+      "office": "governor",
+      "state": "PR",
+      "name": "DOUTOR ALEXANDRE SALOMÃO",
+      "number": "33",
+      "party": "MOBILIZA",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "160002549553",
+      "office": "governor",
+      "state": "PR",
+      "name": "SANDRO ALEX",
+      "number": "55",
+      "party": "PSD",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "160002550997",
+      "office": "governor",
+      "state": "PR",
+      "name": "TAYNÁ MIESSA",
+      "number": "80",
+      "party": "UP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "190002550196",
+      "office": "governor",
+      "state": "RJ",
+      "name": "GAROTINHO",
+      "number": "10",
+      "party": "REPUBLICANOS",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "190002544120",
+      "office": "governor",
+      "state": "RJ",
+      "name": "CORONEL BUSNELLO",
+      "number": "14",
+      "party": "MISSÃO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "190002540198",
+      "office": "governor",
+      "state": "RJ",
+      "name": "CYRO GARCIA",
+      "number": "16",
+      "party": "PSTU",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "190002542887",
+      "office": "governor",
+      "state": "RJ",
+      "name": "DOUGLAS RUAS",
+      "number": "22",
+      "party": "PL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "190002552513",
+      "office": "governor",
+      "state": "RJ",
+      "name": "LUAN MONTEIRO",
+      "number": "29",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "190002537524",
+      "office": "governor",
+      "state": "RJ",
+      "name": "ANDRÉ MARINHO",
+      "number": "30",
+      "party": "NOVO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "190002536162",
+      "office": "governor",
+      "state": "RJ",
+      "name": "WILLIAM SIRI",
+      "number": "50",
+      "party": "PSOL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "190002543380",
+      "office": "governor",
+      "state": "RJ",
+      "name": "EDUARDO PAES",
+      "number": "55",
+      "party": "PSD",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "190002547272",
+      "office": "governor",
+      "state": "RJ",
+      "name": "JULIETE",
+      "number": "80",
+      "party": "UP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "200002534001",
+      "office": "governor",
+      "state": "RN",
+      "name": "CADU DE LULA",
+      "number": "13",
+      "party": "PT",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "200002542481",
+      "office": "governor",
+      "state": "RN",
+      "name": "DÁRIO BARBOSA",
+      "number": "16",
+      "party": "PSTU",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "200002534442",
+      "office": "governor",
+      "state": "RN",
+      "name": "ÁLVARO DIAS",
+      "number": "22",
+      "party": "PL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "200002550223",
+      "office": "governor",
+      "state": "RN",
+      "name": "CARLOS JARARACA",
+      "number": "27",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "200002554482",
+      "office": "governor",
+      "state": "RN",
+      "name": "GODEIRO LINHARESS",
+      "number": "27",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "200002553301",
+      "office": "governor",
+      "state": "RN",
+      "name": "HENRIQUE LYRA",
+      "number": "29",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "200002546756",
+      "office": "governor",
+      "state": "RN",
+      "name": "RODRIGO DE BOLSONARO",
+      "number": "36",
+      "party": "AGIR",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "200002535255",
+      "office": "governor",
+      "state": "RN",
+      "name": "ALLYSON",
+      "number": "44",
+      "party": "UNIÃO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "200002546757",
+      "office": "governor",
+      "state": "RN",
+      "name": "PROFESSOR ROBERIO PAULINO",
+      "number": "50",
+      "party": "PSOL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "200002547826",
+      "office": "governor",
+      "state": "RN",
+      "name": "ARINALDA DO MLB",
+      "number": "80",
+      "party": "UP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "220002542185",
+      "office": "governor",
+      "state": "RO",
+      "name": "EXPEDITO NETTO",
+      "number": "13",
+      "party": "PT",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "220002551251",
+      "office": "governor",
+      "state": "RO",
+      "name": "PEDRO ABIB",
+      "number": "15",
+      "party": "MDB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "220002541939",
+      "office": "governor",
+      "state": "RO",
+      "name": "MARCOS ROGÉRIO",
+      "number": "22",
+      "party": "PL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "220002550927",
+      "office": "governor",
+      "state": "RO",
+      "name": "SAMUEL COSTA",
+      "number": "40",
+      "party": "PSB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "220002542916",
+      "office": "governor",
+      "state": "RO",
+      "name": "HILDON CHAVES",
+      "number": "44",
+      "party": "UNIÃO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "220002536806",
+      "office": "governor",
+      "state": "RO",
+      "name": "ADAILTON FURIA",
+      "number": "55",
+      "party": "PSD",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "230002551571",
+      "office": "governor",
+      "state": "RR",
+      "name": "SOLDADO SAMPAIO",
+      "number": "10",
+      "party": "REPUBLICANOS",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "230002549223",
+      "office": "governor",
+      "state": "RR",
+      "name": "ARTHUR HENRIQUE",
+      "number": "22",
+      "party": "PL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "230002553857",
+      "office": "governor",
+      "state": "RR",
+      "name": "CLÉBIO GENUÍNO",
+      "number": "29",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "230002552060",
+      "office": "governor",
+      "state": "RR",
+      "name": "ROSI AIRES",
+      "number": "50",
+      "party": "PSOL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "230002549294",
+      "office": "governor",
+      "state": "RR",
+      "name": "FARAH MESQUITA",
+      "number": "77",
+      "party": "SOLIDARIEDADE",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "210002551508",
+      "office": "governor",
+      "state": "RS",
+      "name": "JULIANA BRIZOLA",
+      "number": "12",
+      "party": "PDT",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "210002542892",
+      "office": "governor",
+      "state": "RS",
+      "name": "GABRIEL SOUZA",
+      "number": "15",
+      "party": "MDB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "210002541367",
+      "office": "governor",
+      "state": "RS",
+      "name": "REJANE DE OLIVEIRA",
+      "number": "16",
+      "party": "PSTU",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "210002547857",
+      "office": "governor",
+      "state": "RS",
+      "name": "ZUCCO",
+      "number": "22",
+      "party": "PL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "210002552592",
+      "office": "governor",
+      "state": "RS",
+      "name": "CESAR PONTES",
+      "number": "29",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "210002535802",
+      "office": "governor",
+      "state": "RS",
+      "name": "MARCELO MARANATA",
+      "number": "45",
+      "party": "PSDB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "210002533355",
+      "office": "governor",
+      "state": "RS",
+      "name": "PRISCILA VOIGT",
+      "number": "80",
+      "party": "UP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "240002544118",
+      "office": "governor",
+      "state": "SC",
+      "name": "MARCELO BRIGADEIRO",
+      "number": "14",
+      "party": "MISSÃO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "240002541913",
+      "office": "governor",
+      "state": "SC",
+      "name": "PROFESSOR MARCUS SODRÉ",
+      "number": "16",
+      "party": "PSTU",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "240002537073",
+      "office": "governor",
+      "state": "SC",
+      "name": "JORGINHO MELLO",
+      "number": "22",
+      "party": "PL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "240002552157",
+      "office": "governor",
+      "state": "SC",
+      "name": "RALF ZIMMER",
+      "number": "25",
+      "party": "PRD",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "240002553718",
+      "office": "governor",
+      "state": "SC",
+      "name": "BRUNO PEDREIRO DO PCO",
+      "number": "29",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "240002548628",
+      "office": "governor",
+      "state": "SC",
+      "name": "GELSON MERÍSIO",
+      "number": "40",
+      "party": "PSB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "240002551001",
+      "office": "governor",
+      "state": "SC",
+      "name": "JOÃO RODRIGUES",
+      "number": "55",
+      "party": "PSD",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "240002550544",
+      "office": "governor",
+      "state": "SC",
+      "name": "LAÍS CHAUD",
+      "number": "80",
+      "party": "UP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "260002532010",
+      "office": "governor",
+      "state": "SE",
+      "name": "VALMIR DE FRANCISQUINHO",
+      "number": "10",
+      "party": "REPUBLICANOS",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "260002549466",
+      "office": "governor",
+      "state": "SE",
+      "name": "RICARDO MARQUES",
+      "number": "22",
+      "party": "PL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "260002550683",
+      "office": "governor",
+      "state": "SE",
+      "name": "TATY CRISTINA DE JESUS",
+      "number": "27",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "260002551712",
+      "office": "governor",
+      "state": "SE",
+      "name": "EMANUEL CACHO",
+      "number": "45",
+      "party": "PSDB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "260002547415",
+      "office": "governor",
+      "state": "SE",
+      "name": "DR. HELTON",
+      "number": "50",
+      "party": "PSOL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "260002542491",
+      "office": "governor",
+      "state": "SE",
+      "name": "FÁBIO",
+      "number": "55",
+      "party": "PSD",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "250002541303",
+      "office": "governor",
+      "state": "SP",
+      "name": "TARCÍSIO",
+      "number": "10",
+      "party": "REPUBLICANOS",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "250002549705",
+      "office": "governor",
+      "state": "SP",
+      "name": "FERNANDO HADDAD",
+      "number": "13",
+      "party": "PT",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "250002536915",
+      "office": "governor",
+      "state": "SP",
+      "name": "VERA LÚCIA",
+      "number": "16",
+      "party": "PSTU",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "250002550913",
+      "office": "governor",
+      "state": "SP",
+      "name": "CARLOS MACHADO",
+      "number": "21",
+      "party": "PCB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "250002553062",
+      "office": "governor",
+      "state": "SP",
+      "name": "IZADORA DIAS",
+      "number": "29",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "250002548080",
+      "office": "governor",
+      "state": "SP",
+      "name": "POLICIAL EDJANE",
+      "number": "36",
+      "party": "AGIR",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "250002544912",
+      "office": "governor",
+      "state": "SP",
+      "name": "VIVIAN MENDES",
+      "number": "80",
+      "party": "UP",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "270002550458",
+      "office": "governor",
+      "state": "TO",
+      "name": "DU PEREIRA",
+      "number": "27",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "270002548412",
+      "office": "governor",
+      "state": "TO",
+      "name": "ATAIDES DE OLIVEIRA",
+      "number": "30",
+      "party": "NOVO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "270002554375",
+      "office": "governor",
+      "state": "TO",
+      "name": "SIQUEIRA CAMPOS JR",
+      "number": "35",
+      "party": "DEMOCRATA",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "270002546368",
+      "office": "governor",
+      "state": "TO",
+      "name": "SUBTENENTE LUIZ CARLOS",
+      "number": "35",
+      "party": "DEMOCRATA",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "270002544599",
+      "office": "governor",
+      "state": "TO",
+      "name": "PROFESSORA DORINHA",
+      "number": "44",
+      "party": "UNIÃO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "270002544544",
+      "office": "governor",
+      "state": "TO",
+      "name": "VICENTINHO JÚNIOR",
+      "number": "45",
+      "party": "PSDB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "270002539187",
+      "office": "governor",
+      "state": "TO",
+      "name": "PROF WITER NAVES",
+      "number": "50",
+      "party": "PSOL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "270002544494",
+      "office": "governor",
+      "state": "TO",
+      "name": "LAUREZ MOREIRA",
+      "number": "55",
+      "party": "PSD",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "280002542548",
+      "office": "president",
+      "state": "BR",
+      "name": "LULA",
+      "number": "13",
+      "party": "PT",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "280002540694",
+      "office": "president",
+      "state": "BR",
+      "name": "RENAN SANTOS",
+      "number": "14",
+      "party": "MISSÃO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "280002541457",
+      "office": "president",
+      "state": "BR",
+      "name": "HERTZ DIAS",
+      "number": "16",
+      "party": "PSTU",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "280002551975",
+      "office": "president",
+      "state": "BR",
+      "name": "EDMILSON COSTA",
+      "number": "21",
+      "party": "PCB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "280002551544",
+      "office": "president",
+      "state": "BR",
+      "name": "FLAVIO BOLSONARO",
+      "number": "22",
+      "party": "PL",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "280002552484",
+      "office": "president",
+      "state": "BR",
+      "name": "CLARIANA BARAO",
+      "number": "27",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "280002554479",
+      "office": "president",
+      "state": "BR",
+      "name": "LEONARDO AVALANCHE",
+      "number": "28",
+      "party": "PRTB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "280002553884",
+      "office": "president",
+      "state": "BR",
+      "name": "PABLO MARÇAL",
+      "number": "28",
+      "party": "PRTB",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "280002552487",
+      "office": "president",
+      "state": "BR",
+      "name": "RUI COSTA PIMENTA",
+      "number": "29",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "280002539826",
+      "office": "president",
+      "state": "BR",
+      "name": "ZEMA",
+      "number": "30",
+      "party": "NOVO",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "280002548139",
+      "office": "president",
+      "state": "BR",
+      "name": "VETERINÁRIO WILSON GRASSI",
+      "number": "35",
+      "party": "DEMOCRATA",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "280002551932",
+      "office": "president",
+      "state": "BR",
+      "name": "RONALDO CAIADO",
+      "number": "55",
+      "party": "PSD",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "280002551547",
+      "office": "president",
+      "state": "BR",
+      "name": "ESCRITOR AUGUSTO CURY",
+      "number": "70",
+      "party": "AVANTE",
+      "situation": "#NE",
+      "photo": ""
+    },
+    {
+      "id": "280002538811",
+      "office": "president",
+      "state": "BR",
+      "name": "SAMARA",
+      "number": "80",
+      "party": "UP",
+      "situation": "#NE",
+      "photo": ""
+    }
+  ]
 }
