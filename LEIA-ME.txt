@@ -1,0 +1,8 @@
+RADAR DAS ELEIÇÕES 2026 — INSTALAÇÃO NO ANDROID
+
+1. Envie os arquivos desta pasta para a raiz de um repositório GitHub público.
+2. Em Settings > Pages, selecione Deploy from a branch, main, /(root), Save.
+3. Abra o endereço HTTPS informado pelo GitHub Pages no Chrome do celular.
+4. Toque nos três pontinhos > Instalar app (ou Adicionar à tela inicial).
+
+ATENÇÃO: A versão atual não está conectada automaticamente ao TSE. Os resultados só serão exibidos após configurar um endpoint HTTPS confiável no menu Configuração. As fotos públicas podem precisar de internet e não estão todas cadastradas. A interface pode abrir offline após a primeira visita, mas votos ao vivo exigem internet.
