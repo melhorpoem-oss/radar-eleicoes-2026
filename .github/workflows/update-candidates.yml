@@ -1,0 +1,35 @@
+name: Atualizar candidatos do TSE
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 */6 * * *"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/update-candidates.yml"
+      - "tools/update_candidates.py"
+permissions:
+  contents: write
+jobs:
+  refresh-candidates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Atualizar lista oficial
+        run: python tools/update_candidates.py
+      - name: Publicar arquivo atualizado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add candidates-2026.json
+          if git diff --cached --quiet; then
+            echo "A lista não mudou."
+            exit 0
+          fi
+          git commit -m "Atualizar lista de candidaturas do TSE"
+          git push
