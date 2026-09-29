@@ -9,15 +9,53 @@ import re
 import urllib.request
 import zipfile
 from datetime import datetime, timezone
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 SOURCE_URL = "https://cdn.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2026.zip"
 OUTPUT = Path("candidates-2026.json")
+PHOTO_DIR = Path("candidate-photos")
+PHOTO_BASE_URL = "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/fotos"
 STATES = {"AC","AL","AP","AM","BA","CE","DF","ES","GO","MA","MT","MS","MG","PA","PB","PR","PE","PI","RJ","RN","RS","RO","RR","SC","SP","SE","TO"}
 
 
 def clean(value: str | None) -> str:
     return re.sub(r"\s+", " ", (value or "").strip())
+
+
+def add_candidate_photos(candidates: list[dict[str, str]]) -> None:
+    """Cache official TSE candidate JPEGs for the poll on the same GitHub Pages origin."""
+    PHOTO_DIR.mkdir(parents=True, exist_ok=True)
+    (PHOTO_DIR / ".keep").touch(exist_ok=True)
+    grouped: dict[str, list[dict[str, str]]] = {}
+    for candidate in candidates:
+        grouped.setdefault(candidate["state"], []).append(candidate)
+
+    for region, region_candidates in grouped.items():
+        pending = [candidate for candidate in region_candidates
+                   if not (PHOTO_DIR / f'{candidate["id"]}.jpeg').exists()]
+        if pending:
+            url = f"{PHOTO_BASE_URL}/foto_cand2026_{region}_div.zip"
+            request = urllib.request.Request(url, headers={"User-Agent": "RadarEleicoes2026/1.0"})
+            try:
+                with urllib.request.urlopen(request, timeout=240) as response:
+                    archive_bytes = response.read()
+                pending_by_id = {candidate["id"]: candidate for candidate in pending}
+                found: set[str] = set()
+                with zipfile.ZipFile(io.BytesIO(archive_bytes)) as archive:
+                    for info in archive.infolist():
+                        if info.is_dir() or PurePosixPath(info.filename).suffix.lower() not in {".jpg", ".jpeg"}:
+                            continue
+                        candidate_id = PurePosixPath(info.filename).stem
+                        if candidate_id in pending_by_id:
+                            (PHOTO_DIR / f"{candidate_id}.jpeg").write_bytes(archive.read(info))
+                            found.add(candidate_id)
+                print(f"{region}: {len(found)}/{len(pending)} fotos encontradas no arquivo oficial.")
+            except Exception as error:
+                print(f"Aviso: não foi possível baixar fotos da região {region}: {error}")
+
+    for candidate in candidates:
+        image_path = PHOTO_DIR / f'{candidate["id"]}.jpeg'
+        candidate["photo"] = f"./candidate-photos/{candidate['id']}.jpeg" if image_path.exists() else ""
 
 
 def main() -> None:
@@ -68,6 +106,7 @@ def main() -> None:
 
     if not candidates:
         raise RuntimeError("Nenhuma candidatura presidencial ou a governador foi encontrada; arquivo antigo preservado.")
+    add_candidate_photos(list(candidates.values()))
     payload = {
         "source": "Tribunal Superior Eleitoral — Dados Abertos, Candidatos 2026",
         "sourceUrl": "https://dadosabertos.tse.jus.br/dataset/candidatos-2026",
