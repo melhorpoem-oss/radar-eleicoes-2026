@@ -42,11 +42,15 @@ def add_candidate_photos(candidates: list[dict[str, str]]) -> None:
                 pending_by_id = {candidate["id"]: candidate for candidate in pending}
                 found: set[str] = set()
                 with zipfile.ZipFile(io.BytesIO(archive_bytes)) as archive:
-                    for info in archive.infolist():
-                        if info.is_dir() or PurePosixPath(info.filename).suffix.lower() not in {".jpg", ".jpeg"}:
-                            continue
-                        candidate_id = PurePosixPath(info.filename).stem
-                        if candidate_id in pending_by_id:
+                    image_files = [info for info in archive.infolist()
+                                   if not info.is_dir() and PurePosixPath(info.filename).suffix.lower() in {".jpg", ".jpeg"}]
+                    if region == "BR":
+                        print("Exemplos de nomes no ZIP presidencial:", [info.filename for info in image_files[:8]])
+                    for info in image_files:
+                        file_digits = re.sub(r"\\D", "", PurePosixPath(info.filename).stem)
+                        candidate_id = next((candidate_id for candidate_id in pending_by_id
+                                             if candidate_id in file_digits), None)
+                        if candidate_id:
                             (PHOTO_DIR / f"{candidate_id}.jpeg").write_bytes(archive.read(info))
                             found.add(candidate_id)
                 print(f"{region}: {len(found)}/{len(pending)} fotos encontradas no arquivo oficial.")
