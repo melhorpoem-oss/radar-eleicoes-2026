@@ -291,14 +291,23 @@ async function loadResearchPoll(){
  if(pollOffice==='governor'&&!scope){setPollStatus('Escolha um estado para ver a pesquisa.','');$('pollCards').replaceChildren();return}
  $('pollCards').replaceChildren();setPollStatus('Carregando candidaturas e votos…','Fonte das candidaturas: TSE • contagem compartilhada');
  try{
-  const [candidates,counts]=await Promise.all([fetchPollCandidates(pollOffice,scope),pollRpc('get_research_vote_counts',{p_office:pollOffice,p_state_code:scope})]);
+  let candidates,counts;
+  try{candidates=await fetchPollCandidates(pollOffice,scope)}catch(error){throw new Error('TSE_CANDIDATURAS: '+(error.message||'falha de conexão'))}
+  try{counts=await pollRpc('get_research_vote_counts',{p_office:pollOffice,p_state_code:scope})}catch(error){throw new Error('SUPABASE_BANCO: '+(error.message||'falha de conexão'))}
   if(seq!==pollRequestSequence)return;
   if(!candidates.length){setPollStatus('A lista de candidatos ainda não está disponível no TSE.','Tente novamente mais tarde.');return}
   const totals=new Map((Array.isArray(counts)?counts:[]).map(row=>[String(row.candidate_id),Number(row.vote_count)||0]));
   candidates.forEach(candidate=>$('pollCards').append(buildPollCard(candidate,totals.get(candidate.id)||0)));
   const total=[...totals.values()].reduce((sum,value)=>sum+value,0);
   setPollStatus(candidates.length+' candidaturas • '+total.toLocaleString('pt-BR')+' votos somados','Pesquisa informal • Atualizada '+new Date().toLocaleTimeString('pt-BR'));
- }catch(error){if(seq!==pollRequestSequence)return;setPollStatus('A pesquisa ainda precisa ser configurada ou está temporariamente indisponível.',error.message);$('pollCards').replaceChildren()}
+ }catch(error){
+  if(seq!==pollRequestSequence)return;
+  const message=error.message||'falha desconhecida';
+  if(message.startsWith('TSE_CANDIDATURAS:'))setPollStatus('Não consegui carregar a lista de candidatos do TSE.',message.replace('TSE_CANDIDATURAS: ',''));
+  else if(message.startsWith('SUPABASE_BANCO:'))setPollStatus('Não consegui acessar a base compartilhada de votos.',message.replace('SUPABASE_BANCO: ','')+' • Confira se o script SQL foi executado no projeto Supabase.');
+  else setPollStatus('A pesquisa está temporariamente indisponível.',message);
+  $('pollCards').replaceChildren()
+ }
 }
 function setPollOffice(office){
  pollOffice=office;$('pollPresident').classList.toggle('active',office==='president');$('pollGovernor').classList.toggle('active',office==='governor');
