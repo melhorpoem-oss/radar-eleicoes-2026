@@ -1,10 +1,225 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#069f80"><title>Radar das Eleições 2026</title><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><style>*{box-sizing:border-box}body{margin:0;background:#e9edf0;color:#18232b;font-family:system-ui,-apple-system,Arial}header{background:linear-gradient(135deg,#009e82,#08b493);color:white;padding:28px 18px 23px}header .inner,main,nav{max-width:920px;margin:auto}.eyebrow{font-size:12px;letter-spacing:2px;opacity:.85;font-weight:800}h1{margin:6px 0;font-size:27px}header p{margin:5px 0 16px;color:#d9fff6;font-size:13px}.tabs{display:flex;gap:7px}.tabs button{border:1px solid #ffffff77;background:#ffffff1c;color:white;border-radius:24px;padding:10px 15px;font-weight:750}.tabs button.active{background:white;color:#078d76}main{padding:18px 14px 95px}.controls{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}select{width:100%;border:1px solid #d9e4e4;background:white;padding:13px 10px;border-radius:13px;color:#203339;font-weight:650}.status{background:white;border-radius:15px;padding:15px;display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px;box-shadow:0 2px 9px #122b2a0c}.status b{font-size:13px}.status small{display:block;color:#7b898d;margin-top:5px;font-size:11px}.refresh{border:0;background:#009e82;color:white;border-radius:30px;padding:11px 14px;font-weight:800;cursor:pointer}h2{font-size:18px;margin:18px 3px 14px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.candidate{background:white;border-radius:23px;box-shadow:0 3px 10px #172a321c;padding:17px 9px 18px;text-align:center;min-width:0}.portrait{width:104px;height:104px;margin:0 auto 12px;border-radius:50%;padding:6px;background:conic-gradient(#009e82 var(--pct),#e9eeee 0);display:grid;place-items:center}.portrait img,.fallback{width:92px;height:92px;border-radius:50%;object-fit:cover;background:#e3e9ec}.fallback{display:grid;place-items:center;color:#667a82;font-weight:900;font-size:27px}.candidate h3{font-size:14px;line-height:1.22;margin:7px 0 3px;min-height:34px}.party{font-size:12px;color:#7d8a90;margin:0}.pct{font-weight:850;color:#009e82;font-size:24px;margin:12px 0 3px}.votes{font-size:12px;color:#7b858a}.foot{font-size:12px;color:#77868c;text-align:center;margin:20px 4px;line-height:1.5}.empty{padding:30px 15px;text-align:center;background:white;border-radius:18px;color:#63757a;grid-column:1/-1}.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:15px 0}.stat{background:#fff;border-radius:14px;padding:12px 7px;text-align:center}.stat strong{display:block;font-size:17px;color:#079d81}.stat span{font-size:10px;color:#697a7f}nav{position:fixed;bottom:0;left:0;right:0;background:white;border-top:1px solid #e5eded;display:flex;justify-content:space-around;padding:12px;z-index:3}nav a{color:#058f78;text-decoration:none;font-size:12px;font-weight:700}#config{display:none;background:white;padding:15px;border-radius:16px;margin:15px 0}#config input{width:100%;padding:12px;border:1px solid #d3dddd;border-radius:10px}#config button{margin-top:9px;padding:11px;background:#009e82;color:white;border:0;border-radius:9px}@media(min-width:690px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}.candidate{padding:22px}}@media(min-width:900px){.cards{grid-template-columns:repeat(4,minmax(0,1fr))}}</style></head><body><header><div class="inner"><div class="eyebrow">🇧🇷 ELEIÇÕES GERAIS • 2026</div><h1>Radar das Eleições</h1><p>Resultados oficiais • 4 de outubro de 2026</p><div class="tabs"><button id="pres" class="active">Presidência</button><button id="gov">Governadores</button></div></div></header><main><div class="controls"><select id="state" aria-label="Estado"><option value="BR">🇧🇷 Brasil inteiro</option></select><select id="round" aria-label="Turno"><option value="1">1º turno</option><option value="2">2º turno</option></select></div><div class="status"><div><b id="status">⏳ Aguardando apuração oficial</b><small id="updated">Atualização automática: a cada 60 segundos, quando conectada</small></div><button class="refresh" id="refresh">↻ Atualizar</button></div><div class="summary"><div class="stat"><strong id="counted">—</strong><span>Urnas apuradas</span></div><div class="stat"><strong id="valid">—</strong><span>Votos válidos</span></div><div class="stat"><strong id="blank">—</strong><span>Brancos / nulos</span></div></div><h2 id="heading">PRESIDENTE</h2><div id="cards" class="cards"></div><p class="foot">Dados eleitorais devem ser obtidos do Tribunal Superior Eleitoral. Antes da apuração, os valores são exibidos como “—”, sem resultados fictícios. Fotografias públicas carregadas pela Wikipédia quando disponíveis; para cobertura completa, é necessário cadastrar as fotos oficiais do DivulgaCandContas.</p><details id="config"><summary>⚙️ Conectar fonte de resultados (avançado)</summary><p style="font-size:12px">Informe o endereço HTTPS de um serviço próprio que forneça dados oficiais do TSE em JSON. O serviço deve permitir acesso CORS e devolver os campos <code>candidates</code> (array com <code>name, votes, percentage</code>) e, opcionalmente, <code>counted, valid, blank</code>. A URL pode conter {uf}, {cargo} e {turno}.</p><input id="endpoint" placeholder="https://seu-servico.exemplo/resultados?uf={uf}&cargo={cargo}&turno={turno}"><button id="save">Salvar conexão</button></details></main><nav><a href="#" id="home">⌂ Início</a><a href="#cards">▥ Resultados</a><a href="#config" id="settings">⚙ Configuração</a></nav><script>
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#069f80"><title>Radar das Eleições 2026</title><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><style>*{box-sizing:border-box}body{margin:0;background:#e9edf0;color:#18232b;font-family:system-ui,-apple-system,Arial}header{background:linear-gradient(135deg,#009e82,#08b493);color:white;padding:28px 18px 23px}header .inner,main,nav{max-width:920px;margin:auto}.eyebrow{font-size:12px;letter-spacing:2px;opacity:.85;font-weight:800}h1{margin:6px 0;font-size:27px}header p{margin:5px 0 16px;color:#d9fff6;font-size:13px}.tabs{display:flex;gap:7px}.tabs button{border:1px solid #ffffff77;background:#ffffff1c;color:white;border-radius:24px;padding:10px 15px;font-weight:750}.tabs button.active{background:white;color:#078d76}main{padding:18px 14px 95px}.controls{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}select{width:100%;border:1px solid #d9e4e4;background:white;padding:13px 10px;border-radius:13px;color:#203339;font-weight:650}.status{background:white;border-radius:15px;padding:15px;display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px;box-shadow:0 2px 9px #122b2a0c}.status b{font-size:13px}.status small{display:block;color:#7b898d;margin-top:5px;font-size:11px}.refresh{border:0;background:#009e82;color:white;border-radius:30px;padding:11px 14px;font-weight:800;cursor:pointer}h2{font-size:18px;margin:18px 3px 14px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.candidate{background:white;border-radius:23px;box-shadow:0 3px 10px #172a321c;padding:17px 9px 18px;text-align:center;min-width:0}.portrait{width:104px;height:104px;margin:0 auto 12px;border-radius:50%;padding:6px;background:conic-gradient(#009e82 var(--pct),#e9eeee 0);display:grid;place-items:center}.portrait img,.fallback{width:92px;height:92px;border-radius:50%;object-fit:cover;background:#e3e9ec}.fallback{display:grid;place-items:center;color:#667a82;font-weight:900;font-size:27px}.candidate h3{font-size:14px;line-height:1.22;margin:7px 0 3px;min-height:34px}.party{font-size:12px;color:#7d8a90;margin:0}.pct{font-weight:850;color:#009e82;font-size:24px;margin:12px 0 3px}.votes{font-size:12px;color:#7b858a}.foot{font-size:12px;color:#77868c;text-align:center;margin:20px 4px;line-height:1.5}.empty{padding:30px 15px;text-align:center;background:white;border-radius:18px;color:#63757a;grid-column:1/-1}.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:15px 0}.stat{background:#fff;border-radius:14px;padding:12px 7px;text-align:center}.stat strong{display:block;font-size:17px;color:#079d81}.stat span{font-size:10px;color:#697a7f}nav{position:fixed;bottom:0;left:0;right:0;background:white;border-top:1px solid #e5eded;display:flex;justify-content:space-around;padding:12px;z-index:3}nav a{color:#058f78;text-decoration:none;font-size:12px;font-weight:700}#config{display:none;background:white;padding:15px;border-radius:16px;margin:15px 0}#config input{width:100%;padding:12px;border:1px solid #d3dddd;border-radius:10px}#config button{margin-top:9px;padding:11px;background:#009e82;color:white;border:0;border-radius:9px}@media(min-width:690px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}.candidate{padding:22px}}@media(min-width:900px){.cards{grid-template-columns:repeat(4,minmax(0,1fr))}}.environment{font-size:12px;font-weight:750}.nameUrna,.number,.situation{font-size:12px;color:#65767c;margin:4px 0}.situation{line-height:1.35}.candidate h3{margin-bottom:2px}.summary{grid-template-columns:repeat(3,minmax(0,1fr))}</style></head><body><header><div class="inner"><div class="eyebrow">🇧🇷 ELEIÇÕES GERAIS • 2026</div><h1>Radar das Eleições</h1><p>Resultados eleitorais do TSE • <span id="environmentLabel"></span></p><div class="tabs"><button id="pres" class="active">Presidência</button><button id="gov">Governadores</button></div></div></header><main><div class="controls"><select id="state" aria-label="Estado"><option value="BR">🇧🇷 Brasil inteiro</option></select><select id="round" aria-label="Turno"><option value="1">1º turno</option><option value="2">2º turno</option></select></div><div class="status"><div><b id="status">⏳ Aguardando dados do TSE</b><small id="updated">Última atualização: —</small></div><button class="refresh" id="refresh">↻ Atualizar</button></div><div class="summary"><div class="stat"><strong id="counted">—</strong><span>Seções totalizadas</span></div><div class="stat"><strong id="countedPct">—</strong><span>Seções totalizadas (%)</span></div><div class="stat"><strong id="valid">—</strong><span>Votos válidos</span></div><div class="stat"><strong id="blank">—</strong><span>Votos brancos</span></div><div class="stat"><strong id="nullVotes">—</strong><span>Votos nulos</span></div></div><h2 id="heading">PRESIDENTE</h2><div id="cards" class="cards"></div><p class="foot">Dados e fotos são carregados diretamente dos arquivos do Tribunal Superior Eleitoral. Campos ainda indisponíveis são mostrados como “—”. A situação do ambiente selecionado aparece no cabeçalho.</p><details id="environmentInfo"><summary>⚙️ Ambiente de dados</summary><p id="environmentHelp" style="font-size:12px"></p></details></main><nav><a href="#" id="home">⌂ Início</a><a href="#cards">▥ Resultados</a><a href="#environmentInfo" id="settings">⚙ Configuração</a></nav><script>
+// Ambiente por padrão: localhost = simulado; qualquer hospedagem = oficial.
+// Para uma prévia hospedada, defina data-tse-environment="simulated" no elemento <html>.
+const TSE_ENVIRONMENTS={
+  simulated:{key:'simulated',label:'Desenvolvimento/teste • TSE simulado',origin:'https://resultados-sim.tse.jus.br',pathPrefix:'/simulado/',base:'https://resultados-sim.tse.jus.br/simulado',ambiente:'simulado2026',phase:'s',configUrl:'https://resultados-sim.tse.jus.br/simulado/simulado2026/comum/config/ele-c.json'},
+  official:{key:'official',label:'Produção • TSE oficial',origin:'https://resultados.tse.jus.br',pathPrefix:'/oficial/',base:'https://resultados.tse.jus.br',ambiente:'oficial',phase:'o',configUrl:'https://resultados.tse.jus.br/oficial/ele2026/comum/config/ele-c.json'}
+};
 const states={AC:'Acre',AL:'Alagoas',AP:'Amapá',AM:'Amazonas',BA:'Bahia',CE:'Ceará',DF:'Distrito Federal',ES:'Espírito Santo',GO:'Goiás',MA:'Maranhão',MT:'Mato Grosso',MS:'Mato Grosso do Sul',MG:'Minas Gerais',PA:'Pará',PB:'Paraíba',PR:'Paraná',PE:'Pernambuco',PI:'Piauí',RJ:'Rio de Janeiro',RN:'Rio Grande do Norte',RS:'Rio Grande do Sul',RO:'Rondônia',RR:'Roraima',SC:'Santa Catarina',SP:'São Paulo',SE:'Sergipe',TO:'Tocantins'};
-const presidential=[['Luiz Inácio Lula da Silva','PT','Luiz Inácio Lula da Silva'],['Flávio Bolsonaro','PL','Flávio Bolsonaro'],['Romeu Zema','NOVO','Romeu Zema'],['Renan Santos','MISSÃO','Renan Santos (politician)'],['Ronaldo Caiado','PSD','Ronaldo Caiado'],['Augusto Cury','AVANTE','Augusto Cury'],['Samara Martins','UP',''],['Hertz Dias','PSTU',''],['Edmilson Costa','PCB',''],['Clariana Barão','DC',''],['Rui Costa Pimenta','PCO','Rui Costa Pimenta'],['Leonardo Avalanche','PRTB',''],['Wilson Grassi','DEMOCRATA','']].map(([name,party,wiki])=>({name,party,wiki}));
-let mode='pres',results=null;const $=id=>document.getElementById(id),fmt=n=>Number(n).toLocaleString('pt-BR');Object.entries(states).forEach(([uf,name])=>{const o=document.createElement('option');o.value=uf;o.textContent=name;$('state').append(o)});let endpoint=localStorage.getItem('radarEndpoint')||'';$('endpoint').value=endpoint;
-function initials(n){return n.split(' ').filter(x=>x.length>2).slice(0,2).map(x=>x[0]).join('').toUpperCase()}
-function render(){const uf=$('state').value,gov=mode==='gov';$('pres').classList.toggle('active',!gov);$('gov').classList.toggle('active',gov);$('state').querySelector('[value="BR"]').disabled=gov;if(gov&&uf==='BR')$('state').value='BA';$('heading').textContent=gov?'GOVERNADOR • '+states[$('state').value]:'PRESIDENTE • '+(uf==='BR'?'BRASIL':states[uf]);const candidates=results?.candidates||(gov?[]:presidential);$('cards').replaceChildren();if(!candidates.length){$('cards').innerHTML='<div class="empty">🗳️ A lista de candidatos a governador deste estado será carregada ao conectar o cadastro oficial do TSE.<br><br>Não serão exibidos candidatos inventados.</div>';return}candidates.forEach(c=>{const name=c.name||c.nome||'',party=c.party||c.partido||'—',pct=c.percentage??c.porcentagem, votes=c.votes??c.votos;const article=document.createElement('article');article.className='candidate';const p=Number(pct);article.innerHTML='<div class="portrait" style="--pct:'+(Number.isFinite(p)?Math.max(0,Math.min(100,p)):0)+'%"><div class="fallback">'+initials(name)+'</div></div><h3></h3><p class="party"></p><div class="pct">'+(pct==null?'—':fmt(p)+'%')+'</div><div class="votes">'+(votes==null?'Aguardando votos':fmt(votes)+' votos')+'</div>';article.querySelector('h3').textContent=name;article.querySelector('.party').textContent=party;$('cards').append(article);if(c.photo||c.foto){setPhoto(article,c.photo||c.foto)}else if(c.wiki){fetch('https://pt.wikipedia.org/w/api.php?action=query&titles='+encodeURIComponent(c.wiki)+'&prop=pageimages&format=json&pithumbsize=250&origin=*').then(r=>r.json()).then(j=>{let pg=Object.values(j.query.pages)[0];if(pg?.thumbnail?.source)setPhoto(article,pg.thumbnail.source)}).catch(()=>{})}});$('counted').textContent=results?.counted??'—';$('valid').textContent=results?.valid!=null?fmt(results.valid):'—';$('blank').textContent=results?.blank!=null?fmt(results.blank):'—'}
-function setPhoto(card,url){if(!/^https:\/\//.test(url))return;let img=new Image();img.alt='Foto do candidato';img.loading='lazy';img.referrerPolicy='no-referrer';img.onload=()=>{const holder=card.querySelector('.fallback');if(holder)holder.replaceWith(img)};img.src=url}
-async function update(){results=null;const uf=$('state').value,cargo=mode==='gov'?'governador':'presidente',turno=$('round').value;$('status').textContent='⏳ Aguardando apuração oficial';$('updated').textContent='Ainda sem conexão verificada com os resultados do TSE';render();if(!endpoint)return;const url=endpoint.replaceAll('{uf}',encodeURIComponent(uf)).replaceAll('{cargo}',cargo).replaceAll('{turno}',turno);try{if(!url.startsWith('https://'))throw Error('A URL precisa usar HTTPS');let response=await fetch(url,{cache:'no-store'});if(!response.ok)throw Error('HTTP '+response.status);let data=await response.json();if(!Array.isArray(data.candidates))throw Error('JSON sem candidates');results=data;$('status').textContent='🟢 Dados recebidos da fonte configurada';$('updated').textContent='Consulta: '+new Date().toLocaleTimeString('pt-BR')+' • confira a origem do serviço';render()}catch(e){$('status').textContent='⚠️ Fonte indisponível';$('updated').textContent=e.message;render()}}
-$('pres').onclick=()=>{mode='pres';update()};$('gov').onclick=()=>{mode='gov';if($('state').value==='BR')$('state').value='BA';update()};$('state').onchange=update;$('round').onchange=update;$('refresh').onclick=update;$('save').onclick=()=>{endpoint=$('endpoint').value.trim();localStorage.setItem('radarEndpoint',endpoint);update();$('config').open=false};$('settings').onclick=e=>{e.preventDefault();$('config').open=!$('config').open;$('config').scrollIntoView({behavior:'smooth'})};$('home').onclick=()=>window.scrollTo({top:0,behavior:'smooth'});render();update();setInterval(update,60000);
-if ("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("./sw.js").catch(()=>{});</script></body></html>
+const explicitEnvironment=document.documentElement.dataset.tseEnvironment;
+const localHosts=['localhost','127.0.0.1','::1'];
+const defaultEnvironment=localHosts.includes(location.hostname)||location.protocol==='file:'?'simulated':'official';
+const environmentKey=explicitEnvironment==='simulated'||explicitEnvironment==='official'?explicitEnvironment:defaultEnvironment;
+const environment=TSE_ENVIRONMENTS[environmentKey];
+let mode='pres',currentResult=null,electionConfig=null,configFetchedAt=0,configRequest=null,activeController=null,requestSequence=0;
+const CONFIG_TTL=10*60*1000,POLL_INTERVAL=60*1000,NOT_FOUND_TTL=15*60*1000;
+const missingUrls=new Map(),photoPromises=new Map();
+const $=id=>document.getElementById(id);
+const fmtInteger=value=>{const n=toNumber(value);return n===null?'—':Math.trunc(n).toLocaleString('pt-BR')};
+function toNumber(value){if(value===null||value===undefined||value==='')return null;const n=Number(value);return Number.isFinite(n)?n:null}
+function fmtPercent(value){const n=toNumber(value);return n===null?'—':n.toLocaleString('pt-BR',{maximumFractionDigits:2})+'%'}
+function initials(name){return String(name||'').trim().split(/\s+/).filter(part=>part.length>2).slice(0,2).map(part=>part[0]).join('').toUpperCase()||'—'}
+function asArray(value){return Array.isArray(value)?value:[]}
+function normalizeText(value){return String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()}
+function phaseName(){return environmentKey==='simulated'?'simulado':'oficial'}
+function setStatus(message,detail){$('status').textContent=message;$('updated').textContent=detail}
+function setEmptySummary(){['counted','countedPct','valid','blank','nullVotes'].forEach(id=>$(id).textContent='—')}
+function updateHeading(){const uf=$('state').value,gov=mode==='gov';$('pres').classList.toggle('active',!gov);$('gov').classList.toggle('active',gov);$('state').querySelector('[value="BR"]').disabled=gov;if(gov&&uf==='BR')$('state').value='BA';const selected=$('state').value;$('heading').textContent=gov?'GOVERNADOR • '+(states[selected]||selected):'PRESIDENTE • '+(selected==='BR'?'BRASIL':states[selected]||selected)}
+function buildPhotoUrl(photoDir,selected){
+  const seq=selected.candidate.sqcand;if(seq===null||seq===undefined||String(seq)==='')return null;
+  if(!photoDir)return null;
+  const vars=makePathVariables(selected,selected.scopeCode);
+  const dir=resolveDirectory(photoDir,vars);
+  return appendFile(dir,encodeURIComponent(String(seq))+'.jpeg');
+}
+function makeCard(candidate,selected){
+  const article=document.createElement('article');article.className='candidate';
+  const portrait=document.createElement('div');portrait.className='portrait';portrait.style.setProperty('--pct',candidate.percentValue===null?'0%':Math.max(0,Math.min(100,candidate.percentValue))+'%');
+  const fallback=document.createElement('div');fallback.className='fallback';fallback.textContent=initials(candidate.name||candidate.ballotName);portrait.append(fallback);
+  const heading=document.createElement('h3');heading.textContent=candidate.name||'—';
+  const ballotName=document.createElement('p');ballotName.className='nameUrna';ballotName.textContent='Na urna: '+(candidate.ballotName||'—');
+  const party=document.createElement('p');party.className='party';party.textContent='Partido: '+(candidate.party||'—');
+  const number=document.createElement('p');number.className='number';number.textContent='Número: '+(candidate.number===null?'—':String(candidate.number));
+  const percentage=document.createElement('div');percentage.className='pct';percentage.textContent=fmtPercent(candidate.percentage);
+  const votes=document.createElement('div');votes.className='votes';votes.textContent=candidate.votes===null?'—':fmtInteger(candidate.votes)+' votos';
+  const situation=document.createElement('p');situation.className='situation';situation.textContent='Situação: '+(candidate.situation||'—');
+  article.append(portrait,heading,ballotName,party,number,percentage,votes,situation);
+  const photoUrl=buildPhotoUrl(selected.photoDir,{...selected,candidate});
+  if(photoUrl)loadOfficialPhoto(article,portrait,fallback,photoUrl,candidate.name||candidate.ballotName);
+  return article;
+}
+function loadOfficialPhoto(article,portrait,fallback,url,name){
+  let promise=photoPromises.get(url);
+  if(!promise){promise=new Promise(resolve=>{const image=new Image();image.alt='Foto oficial de '+(name||'candidato');image.loading='lazy';image.referrerPolicy='no-referrer';image.onload=()=>resolve(true);image.onerror=()=>resolve(false);image.src=url});photoPromises.set(url,promise)}
+  promise.then(ok=>{if(!ok||!article.isConnected||!fallback.isConnected)return;const image=document.createElement('img');image.alt='Foto oficial de '+(name||'candidato');image.loading='lazy';image.referrerPolicy='no-referrer';image.src=url;fallback.replaceWith(image)})
+}
+function render(){
+  updateHeading();const cards=$('cards');cards.replaceChildren();setEmptySummary();
+  if(!currentResult){cards.innerHTML='<div class="empty">Os resultados do ambiente TSE selecionado ainda não estão disponíveis.</div>';return}
+  const selected=currentResult.selected,data=currentResult.data;
+  const section=data.s||{},votes=data.v||{};
+  $('counted').textContent=fmtInteger(section.st);$('countedPct').textContent=fmtPercent(section.pst);$('valid').textContent=fmtInteger(votes.vv);$('blank').textContent=fmtInteger(votes.vb);$('nullVotes').textContent=fmtInteger(votes.vn);
+  const cargo=asArray(data.carg).find(item=>String(item.cd).padStart(4,'0')===selected.cargoCode);
+  const mapped=cargo?flattenCandidates(cargo):[];
+  if(!mapped.length){cards.innerHTML='<div class="empty">Ainda não há candidatos/resultados publicados para esta eleição e abrangência.</div>';return}
+  mapped.forEach(candidate=>cards.append(makeCard(candidate,{...selected,candidate})))
+}
+function flattenCandidates(cargo){
+  const result=[];
+  asArray(cargo.agr).forEach(group=>asArray(group.par).forEach(party=>asArray(party.cand).forEach(candidate=>{
+    const votes=toNumber(candidate.vap),percentage=toNumber(candidate.pvap);
+    let situation=candidate.st||'';
+    if(!situation&&candidate.e==='s')situation='Eleito / 2º turno conforme totalização';
+    else if(!situation&&candidate.e==='n')situation='Não eleito';
+    result.push({name:candidate.nm||'',ballotName:candidate.nmu||'',number:candidate.n??null,party:party.sg||'—',votes,percentage,percentValue:percentage,situation,sqcand:candidate.sqcand??null})
+  })));
+  return result;
+}
+function makePathVariables(selected,scopeCode){
+  return {base:environment.base,ambiente:environment.ambiente,ciclo:selected.cycle,cd_eleicao:String(selected.electionCode),cd_pleito:String(selected.pleitoCode),uf:String(scopeCode||selected.scopeCode).toLowerCase()};
+}
+function resolveDirectory(template,variables){
+  let path=String(template||'');
+  Object.entries(variables).forEach(([key,value])=>{
+    path=path.replaceAll('<'+key+'>',String(value)).replaceAll('{'+key+'}',String(value));
+  });
+  if(/<[a-z_]+>|\{[a-z_]+\}/i.test(path))throw new Error('A configuração do TSE contém tokens de caminho não reconhecidos.');
+  return path;
+}
+function validateEnvironmentUrl(value){
+  const url=new URL(value);
+  if(url.origin!==environment.origin||!url.pathname.startsWith(environment.pathPrefix))throw new Error('O caminho recebido não pertence ao ambiente TSE selecionado.');
+  return url.href
+}
+function appendFile(directory,fileName){
+  const base=String(directory||'').replace(/\/+$/,'')+'/';
+  return validateEnvironmentUrl(new URL(fileName,base).href)
+}
+function findArchiveTemplate(config,type){
+  const entry=asArray(config.arq).find(item=>String(item.tp).toLowerCase()===type);
+  return entry&&entry.dir?entry.dir:null;
+}
+function getElectionEntries(config){
+  return asArray(config.pl).flatMap(pleito=>asArray(pleito.e).map(eleicao=>({pleito,eleicao})));
+}
+function is2026Pleito(pleito){
+  const cycle=String(pleito.c||'');
+  const date=String(pleito.dt||'');
+  return cycle.includes('2026')||date.includes('/2026');
+}
+function findElection(config,round,scopeCode){
+  const type=mode==='pres'?8:1,targetScope=mode==='pres'?'br':scopeCode.toLowerCase();
+  const entries=getElectionEntries(config).filter(entry=>is2026Pleito(entry.pleito)&&Number(entry.eleicao.tp)===type);
+  const hasScope=entry=>asArray(entry.eleicao.abr).some(abr=>String(abr.cd).toLowerCase()===targetScope);
+  let match=entries.find(entry=>Number(entry.eleicao.t)===round&&hasScope(entry));
+  if(!match&&round===2){
+    const first=entries.find(entry=>Number(entry.eleicao.t)===1&&hasScope(entry)&&entry.eleicao.cdt2!==undefined&&entry.eleicao.cdt2!==null);
+    if(first)match={pleito:first.pleito,eleicao:{...first.eleicao,cd:first.eleicao.cdt2,t:'2'}};
+  }
+  if(!match)throw new Error(round===2?'O TSE ainda não publicou a configuração do 2º turno para esta abrangência.':'Não há eleição compatível na configuração ele-c.json.');
+  const abr=asArray(match.eleicao.abr).find(item=>String(item.cd).toLowerCase()===targetScope);
+  if(!abr)throw new Error('A abrangência solicitada não consta na configuração do TSE.');
+  const cargoName=mode==='pres'?'presidente':'governador';
+  const cargo=asArray(abr.cp).find(item=>normalizeText(item.ds).includes(cargoName));
+  if(!cargo||cargo.cd===undefined)throw new Error('O cargo não está disponível nesta eleição/abrangência.');
+  return {pleito:match.pleito,electionCode:match.eleicao.cd,cargoCode:String(cargo.cd).padStart(4,'0'),scopeCode:targetScope,round};
+}
+function makeEA20Url(config,selected){
+  const template=findArchiveTemplate(config,'u');
+  if(!template)throw new Error('A configuração do TSE não informa o diretório de resultados EA20.');
+  const dir=resolveDirectory(template,makePathVariables(selected,selected.scopeCode));
+  const electionPart=String(selected.electionCode).padStart(6,'0');
+  const fileName=selected.scopeCode+'-c'+selected.cargoCode+'-e'+electionPart+'-u.json';
+  return appendFile(dir,fileName)
+}
+function makePhotoDirectory(config,selected){
+  const template=findArchiveTemplate(config,'ft');
+  return template?resolveDirectory(template,makePathVariables(selected,selected.scopeCode)):null
+}
+async function getElectionConfig(){
+  if(electionConfig&&Date.now()-configFetchedAt<CONFIG_TTL)return electionConfig;
+  if(configRequest)return configRequest;
+  configRequest=(async()=>{
+    try{
+      const response=await fetch(validateEnvironmentUrl(environment.configUrl),{cache:'default',mode:'cors'});
+      if(!response.ok)throw new Error('HTTP '+response.status+' ao carregar ele-c.json');
+      const config=await response.json();
+      if(!Array.isArray(config.pl)||!Array.isArray(config.arq))throw new Error('ele-c.json não tem o formato EA11 esperado.');
+      if(config.f!==environment.phase)throw new Error('A fase de ele-c.json não corresponde ao ambiente '+phaseName()+'.');
+      electionConfig=config;configFetchedAt=Date.now();return config
+    }catch(error){if(!electionConfig)throw error;return electionConfig}
+    finally{configRequest=null}
+  })();
+  return configRequest
+}
+async function fetchEA20(url,signal){
+  const expires=missingUrls.get(url);
+  if(expires&&expires>Date.now())throw new Error('Os dados para esta eleição ainda não foram publicados (HTTP 404).');
+  try{
+    const response=await fetch(url,{cache:'no-cache',mode:'cors',signal});
+    if(response.status===404){missingUrls.set(url,Date.now()+NOT_FOUND_TTL);throw new Error('Os dados para esta eleição ainda não foram publicados (HTTP 404).')}
+    if(!response.ok)throw new Error('HTTP '+response.status+' ao consultar o TSE');
+    const data=await response.json();
+    if(!Array.isArray(data.carg))throw new Error('O arquivo recebido não tem a estrutura EA20 esperada.');
+    return data
+  }catch(error){throw error}
+}
+function electionStatus(data){
+  if(data.tf==='s')return 'Totalização finalizada';
+  if(data.and==='f')return 'Seções totalizadas; totalização final ainda não indicada';
+  if(data.and==='p')return 'Apuração em andamento';
+  if(data.and==='n')return 'Aguardando dados do TSE';
+  return 'Situação da apuração indisponível'
+}
+function updateEnvironmentDescription(){
+  $('environmentLabel').textContent=phaseName();
+  $('environmentHelp').textContent=environment.label+'. Configuração: '+environment.configUrl+'. O ambiente oficial/simulado é validado pelo campo de fase da configuração e dos resultados.';
+}
+async function update(){
+  const thisSequence=++requestSequence;
+  if(activeController)activeController.abort();
+  activeController=new AbortController();
+  currentResult=null;setEmptySummary();render();
+  setStatus('⏳ Carregando dados do TSE', 'Ambiente '+phaseName()+' • Última atualização: —');
+  const uf=$('state').value,round=Number($('round').value),scope=mode==='pres'?'br':uf.toLowerCase();
+  try{
+    const config=await getElectionConfig();
+    if(thisSequence!==requestSequence)return;
+    const selection=findElection(config,round,scope);
+    selection.cycle=selection.pleito.c;selection.pleitoCode=selection.pleito.cd;
+    selection.configCode=selection.electionCode;
+    selection.photoDir=makePhotoDirectory(config,selection);
+    const url=makeEA20Url(config,selection);
+    const data=await fetchEA20(url,activeController.signal);
+    if(thisSequence!==requestSequence)return;
+    if(data.f!==environment.phase)throw new Error('A fase do EA20 não corresponde ao ambiente '+phaseName()+'.');
+    const expectedScopeType=selection.scopeCode==='br'?'br':'uf';
+    if(String(data.tpabr).toLowerCase()!==expectedScopeType||String(data.cdabr).toLowerCase()!==selection.scopeCode)throw new Error('O EA20 retornado não corresponde à abrangência selecionada.');
+    if(Number(data.t)!==round)throw new Error('O EA20 recebido não corresponde ao turno selecionado.');
+    if(String(data.ele)!==String(selection.electionCode))throw new Error('O EA20 recebido não corresponde ao código descoberto na configuração.');
+    currentResult={data,selected:selection};
+    render();
+    const count=fmtInteger(data.s&&data.s.st),pct=fmtPercent(data.s&&data.s.pst);
+    setStatus('🟢 '+electionStatus(data),'Ambiente '+phaseName()+' • '+count+' seções ('+pct+') • Última atualização: '+new Date().toLocaleTimeString('pt-BR'))
+  }catch(error){
+    if(error.name==='AbortError'||thisSequence!==requestSequence)return;
+    currentResult=null;render();
+    const detail=error.message&&error.message.includes('404')?error.message:'Falha ao ler os arquivos oficiais do TSE. Verifique a conexão e se o CORS permite acesso a este domínio. Detalhe: '+(error.message||'erro de rede');
+    setStatus('⚠️ Dados do TSE indisponíveis', 'Ambiente '+phaseName()+' • Última atualização: — • '+detail)
+  }
+}
+Object.entries(states).forEach(([uf,name])=>{const option=document.createElement('option');option.value=uf;option.textContent=name;$('state').append(option)});
+$('pres').onclick=()=>{mode='pres';update()};
+$('gov').onclick=()=>{mode='gov';if($('state').value==='BR')$('state').value='BA';update()};
+$('state').onchange=()=>update();
+$('round').onchange=()=>update();
+$('refresh').onclick=()=>update();
+$('settings').onclick=event=>{event.preventDefault();const details=$('environmentInfo');details.open=!details.open;details.scrollIntoView({behavior:'smooth'})};
+$('home').onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+updateEnvironmentDescription();render();update();setInterval(update,POLL_INTERVAL);
+if('serviceWorker'in navigator&&location.protocol==='https:')navigator.serviceWorker.register('./sw.js').catch(()=>{});
+</script></body></html>
+
+
+
+
