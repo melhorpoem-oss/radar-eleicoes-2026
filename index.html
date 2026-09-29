@@ -66,7 +66,14 @@ function render(){
   const cargo=asArray(data.carg).find(item=>String(item.cd).padStart(4,'0')===selected.cargoCode);
   const mapped=cargo?flattenCandidates(cargo):[];
   if(!mapped.length){cards.innerHTML='<div class="empty">Ainda não há candidatos/resultados publicados para esta eleição e abrangência.</div>';return}
-  mapped.forEach(candidate=>cards.append(makeCard(candidate,{...selected,candidate})))
+  const candidateVoteTotal=mapped.reduce((sum,candidate)=>sum+(candidate.votes||0),0);
+  mapped.forEach(candidate=>{
+    if(candidate.percentage===null){
+      candidate.percentage=candidateVoteTotal>0&&candidate.votes!==null?candidate.votes/candidateVoteTotal*100:0;
+      candidate.percentValue=candidate.percentage;
+    }
+    cards.append(makeCard(candidate,{...selected,candidate}));
+  })
 }
 function flattenCandidates(cargo){
   const result=[];
