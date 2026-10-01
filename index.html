@@ -49,7 +49,7 @@ function loadOfficialPhoto(article,portrait,fallback,url,name){
 }
 function render(){
   updateHeading();const cards=$('cards');cards.replaceChildren();setEmptySummary();
-  if(!currentResult){cards.innerHTML='<div class="empty">Os resultados do ambiente TSE selecionado ainda não estão disponíveis.</div>';return}
+  if(!currentResult)return
   const selected=currentResult.selected,data=currentResult.data;
   const section=data.s||{},votes=data.v||{};
   $('counted').textContent=fmtInteger(section.st);$('countedPct').textContent=fmtPercent(section.pst);$('valid').textContent=fmtInteger(votes.vv);$('blank').textContent=fmtInteger(votes.vb);$('nullVotes').textContent=fmtInteger(votes.vn);
