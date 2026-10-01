@@ -20,16 +20,16 @@ function phaseName(){return 'oficial'}
 function setStatus(message,detail){$('status').textContent=message;$('updated').textContent=detail}
 function setEmptySummary(){['counted','countedPct','valid','blank','nullVotes'].forEach(id=>$(id).textContent='—')}
 function updateHeading(){
- const office=OFFICES[mode],isPresident=!office.stateRequired,state=$('state'),round=$('round'),stateValue=state.value;
+ const office=OFFICES[mode],isPresident=mode==='pres',state=$('state'),round=$('round'),stateValue=state.value;
  document.querySelectorAll('#officialHeaderTabs button').forEach(button=>button.classList.toggle('active',button.id===mode));
  $('depState').textContent=stateValue==='DF'?'Deputado Distrital':'Deputado Estadual';
- state.disabled=isPresident;state.querySelector('[value="BR"]').disabled=!isPresident;
- if(isPresident){state.value='BR'}else if(state.value==='BR'){state.value=''}
+ state.disabled=false;state.querySelector('[value="BR"]').disabled=!isPresident;
+ if(!isPresident&&state.value==='BR')state.value='';
  const roundVisible=office.hasRound;round.hidden=!roundVisible;round.disabled=!roundVisible;if(!roundVisible)round.value='1';
  $('state').closest('.controls').classList.toggle('single',!roundVisible);
  const selected=state.value,region=selected?states[selected]:null;
  const labels={pres:'PRESIDENTE',gov:'GOVERNADOR',sen:'SENADOR',depFed:'DEPUTADO FEDERAL',depState:selected==='DF'?'DEPUTADO DISTRITAL':'DEPUTADO ESTADUAL'};
- $('heading').textContent=isPresident?'PRESIDENTE • BRASIL':labels[mode]+' • '+(region||'ESCOLHA UM ESTADO')
+ $('heading').textContent=isPresident?'PRESIDENTE • '+(selected==='BR'?'BRASIL':(region||'ESCOLHA UM ESTADO')):labels[mode]+' • '+(region||'ESCOLHA UM ESTADO')
 }
 function buildPhotoUrl(photoDir,selected){
   const seq=selected.candidate.sqcand;if(seq===null||seq===undefined||String(seq)==='')return null;
@@ -122,7 +122,7 @@ function is2026Pleito(pleito){
   return cycle.includes('2026')||date.includes('/2026');
 }
 function findElection(config,round,scopeCode){
-  const office=OFFICES[mode],type=office.electionType,targetScope=office.stateRequired?scopeCode.toLowerCase():'br';
+  const office=OFFICES[mode],type=office.electionType,targetScope=(office.stateRequired||mode==='pres')?scopeCode.toLowerCase():'br';
   const entries=getElectionEntries(config).filter(entry=>is2026Pleito(entry.pleito)&&Number(entry.eleicao.tp)===type);
   const hasScope=entry=>asArray(entry.eleicao.abr).some(abr=>String(abr.cd).toLowerCase()===targetScope);
   let match=entries.find(entry=>Number(entry.eleicao.t)===round&&hasScope(entry));
@@ -207,7 +207,7 @@ async function update(){
   const uf=$('state').value;
   if(OFFICES[mode].stateRequired&&!uf){currentResult=null;setEmptySummary();render();setStatus('Escolha um estado para ver os resultados','Selecione a unidade da Federação que deseja acompanhar.');return}
   if(!OFFICES[mode].hasRound)$('round').value='1';
-  const round=Number($('round').value),scope=OFFICES[mode].stateRequired?uf.toLowerCase():'br';
+  const round=Number($('round').value),scope=(OFFICES[mode].stateRequired||mode==='pres')?uf.toLowerCase():'br';
   try{
     const config=await getElectionConfig();
     if(thisSequence!==requestSequence)return;
