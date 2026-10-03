@@ -356,7 +356,7 @@ function makeCard(candidate,selected){
   const votes=document.createElement('div');votes.className='votes';votes.textContent=candidate.votes===null?'—':fmtInteger(candidate.votes)+' votos';
   const situation=document.createElement('p');situation.className='situation';situation.textContent='Situação: '+(candidate.situation||'—');
   article.append(portrait,heading,ballotName,party,number,percentage,votes,situation);
-  const photoUrl=buildPhotoUrl(selected.photoDir,{...selected,candidate});
+  const photoUrl=candidate.photo||buildPhotoUrl(selected.photoDir,{...selected,candidate});
   if(photoUrl)loadOfficialPhoto(article,portrait,fallback,photoUrl,candidate.name||candidate.ballotName);
   return article;
 }
@@ -367,7 +367,13 @@ function loadOfficialPhoto(article,portrait,fallback,url,name){
 }
 function render(){
   updateHeading();const cards=$('cards');cards.replaceChildren();setEmptySummary();
-  if(!currentResult)return
+  if(!currentResult)return;
+  if(currentResult.preElection){
+    const mapped=currentResult.candidates||[];
+    if(!mapped.length){cards.innerHTML='<div class="empty">A lista prévia de candidaturas para este cargo/estado ainda não está disponível no arquivo local. Use “Atualizar” para verificar novamente.</div>';return}
+    mapped.forEach(candidate=>cards.append(makeCard(candidate,{...currentResult.selected,candidate})));
+    return;
+  }
   const selected=currentResult.selected,data=currentResult.data;
   const section=data.s||{},votes=data.v||{};
   $('counted').textContent=fmtInteger(section.st);$('countedPct').textContent=fmtPercent(section.pst);$('valid').textContent=fmtInteger(votes.vv);$('blank').textContent=fmtInteger(votes.vb);$('nullVotes').textContent=fmtInteger(votes.vn);
@@ -497,21 +503,52 @@ function updateEnvironmentDescription(){
 }
 const RESULTS_START=Date.parse('2026-10-04T17:00:00-03:00');
 function waitingForOfficialPublication(){return Date.now()<RESULTS_START}
+function formatTseTimestamp(value){
+  if(!value)return 'data de atualização não informada';
+  const parsed=Date.parse(value);
+  return Number.isFinite(parsed)?new Date(parsed).toLocaleString('pt-BR'):'data de atualização não informada';
+}
+function preElectionOffice(){
+  return ({pres:'president',gov:'governor',sen:'senator',depFed:'deputy_federal',depState:'deputy_state'})[mode];
+}
+async function loadPreElectionCandidates(sequence){
+  const response=await fetch('./candidates-2026.json?check='+Date.now(),{cache:'no-store'});
+  if(!response.ok)throw new Error('Arquivo de candidaturas: HTTP '+response.status);
+  const payload=await response.json();
+  if(sequence!==requestSequence)return;
+  const office=preElectionOffice(),scope=mode==='pres'?'BR':$('state').value;
+  const candidates=(Array.isArray(payload.candidates)?payload.candidates:[])
+    .filter(item=>item.office===office&&item.state===scope)
+    .map(item=>({name:item.name||'',ballotName:item.name||'',number:item.number==null?'':String(item.number),party:item.party||'—',votes:null,percentage:null,percentValue:null,situation:item.situation||'Candidatura cadastrada no TSE',photo:item.photo||''}))
+    .sort((a,b)=>Number(a.number)-Number(b.number)||a.name.localeCompare(b.name,'pt-BR'));
+  currentResult={preElection:true,candidates,selected:{scopeCode:mode==='pres'?'br':String(scope||'').toLowerCase(),photoDir:null}};
+  render();
+  const checkedAt=new Date().toLocaleTimeString('pt-BR');
+  if(candidates.length){
+    setStatus('📋 Candidaturas oficiais preparadas','Lista do TSE atualizada em '+formatTseTimestamp(payload.updatedAt)+' • Verificação do app: '+checkedAt+' • A totalização dos votos começa em 04/10/2026 às 17h (Brasília).');
+  }else{
+    setStatus('⚠️ Lista de candidaturas não encontrada','Verificação do app: '+checkedAt+' • O arquivo foi carregado, mas não há candidaturas para este cargo/estado. Tente novamente mais tarde.');
+  }
+}
 async function update(){
+  const thisSequence=++requestSequence;
+  if(activeController){activeController.abort();activeController=null}
   if(OFFICES[mode].stateRequired&&!$('state').value){currentResult=null;setEmptySummary();render();setStatus('Escolha um estado para ver os resultados','Selecione a unidade da Federação que deseja acompanhar.');return}
   if(waitingForOfficialPublication()){
-    if(activeController){activeController.abort();activeController=null}
-    currentResult=null;setEmptySummary();render();
-    setStatus('🕒 Aguardando divulgação oficial do TSE','A totalização começa em 04/10/2026 às 17h, horário de Brasília. A consulta automática aos arquivos oficiais será retomada após esse horário.');
+    try{
+      setStatus('🔄 Verificando candidaturas do TSE…','Consultando a lista de candidaturas antes da apuração.');
+      await loadPreElectionCandidates(thisSequence);
+    }catch(error){
+      if(thisSequence!==requestSequence)return;
+      render();
+      setStatus('⚠️ Não foi possível atualizar as candidaturas','Última tentativa: '+new Date().toLocaleTimeString('pt-BR')+' • '+(error.message||'Erro de rede')+'. Tente novamente.');
+    }
     return
   }
-  const thisSequence=++requestSequence;
-  if(activeController)activeController.abort();
   activeController=new AbortController();
   currentResult=null;setEmptySummary();render();
-  setStatus('⏳ Carregando dados do TSE', 'Ambiente '+phaseName()+' • Última atualização: —');
+  setStatus('⏳ Carregando dados do TSE', 'Ambiente '+phaseName()+' • Consulta iniciada: '+new Date().toLocaleTimeString('pt-BR'));
   const uf=$('state').value;
-  if(OFFICES[mode].stateRequired&&!uf){currentResult=null;setEmptySummary();render();setStatus('Escolha um estado para ver os resultados','Selecione a unidade da Federação que deseja acompanhar.');return}
   if(!OFFICES[mode].hasRound)$('round').value='1';
   const round=Number($('round').value),scope=(OFFICES[mode].stateRequired||mode==='pres')?uf.toLowerCase():'br';
   try{
@@ -537,7 +574,7 @@ async function update(){
     if(error.name==='AbortError'||thisSequence!==requestSequence)return;
     currentResult=null;render();
     const detail=error.message&&error.message.includes('404')?error.message:'Falha ao ler os arquivos oficiais do TSE. Verifique a conexão e se o CORS permite acesso a este domínio. Detalhe: '+(error.message||'erro de rede');
-    setStatus('⚠️ Dados do TSE indisponíveis', 'Ambiente '+phaseName()+' • Última atualização: — • '+detail)
+    setStatus('⚠️ Dados do TSE indisponíveis', 'Ambiente '+phaseName()+' • Última tentativa: '+new Date().toLocaleTimeString('pt-BR')+' • '+detail)
   }
 }
 Object.entries(states).forEach(([uf,name])=>{const option=document.createElement('option');option.value=uf;option.textContent=name;$('state').append(option)});
