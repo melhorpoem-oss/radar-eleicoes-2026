@@ -27,10 +27,9 @@ def add_candidate_photos(candidates: list[dict[str, str]]) -> None:
     PHOTO_DIR.mkdir(parents=True, exist_ok=True)
     (PHOTO_DIR / ".keep").touch(exist_ok=True)
     grouped: dict[str, list[dict[str, str]]] = {}
-    # Cache photos only for presidential and governor candidates to keep GitHub Pages lightweight.
+    # Cache every registered candidate photo locally so all cards can render before vote counting starts.
     for candidate in candidates:
-        if candidate["office"] in {"president", "governor"}:
-            grouped.setdefault(candidate["state"], []).append(candidate)
+        grouped.setdefault(candidate["state"], []).append(candidate)
 
     for region, region_candidates in grouped.items():
         pending = [candidate for candidate in region_candidates
