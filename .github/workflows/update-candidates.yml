@@ -32,4 +32,6 @@ jobs:
             exit 0
           fi
           git commit -m "Atualizar lista de candidaturas do TSE"
+          git fetch origin main
+          git rebase origin/main
           git push
