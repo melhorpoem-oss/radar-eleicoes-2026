@@ -502,6 +502,8 @@ function updateEnvironmentDescription(){
   $('environmentHelp').textContent=environment.label+'. Configuração oficial do TSE: '+environment.configUrl+'. Os códigos da eleição e os arquivos são lidos da configuração oficial EA11.';
 }
 const RESULTS_START=Date.parse('2026-10-04T17:00:00-03:00');
+const PRE_ELECTION_REFRESH_INTERVAL=6*60*60*1000;
+let preElectionFetchedAt=0;
 function waitingForOfficialPublication(){return Date.now()<RESULTS_START}
 function formatTseTimestamp(value){
   if(!value)return 'data de atualização não informada';
@@ -521,7 +523,8 @@ async function loadPreElectionCandidates(sequence){
     .filter(item=>item.office===office&&item.state===scope)
     .map(item=>({name:item.name||'',ballotName:item.name||'',number:item.number==null?'':String(item.number),party:item.party||'—',votes:null,percentage:null,percentValue:null,situation:item.situation||'Candidatura cadastrada no TSE',photo:item.photo||''}))
     .sort((a,b)=>Number(a.number)-Number(b.number)||a.name.localeCompare(b.name,'pt-BR'));
-  currentResult={preElection:true,candidates,selected:{scopeCode:mode==='pres'?'br':String(scope||'').toLowerCase(),photoDir:null}};
+  currentResult={preElection:true,preElectionOffice:mode,preElectionScope:scope,candidates,selected:{scopeCode:mode==='pres'?'br':String(scope||'').toLowerCase(),photoDir:null}};
+  preElectionFetchedAt=Date.now();
   render();
   const checkedAt=new Date().toLocaleTimeString('pt-BR');
   if(candidates.length){
@@ -530,11 +533,13 @@ async function loadPreElectionCandidates(sequence){
     setStatus('⚠️ Lista de candidaturas não encontrada','Verificação do app: '+checkedAt+' • O arquivo foi carregado, mas não há candidaturas para este cargo/estado. Tente novamente mais tarde.');
   }
 }
-async function update(){
+async function update(force=false){
   const thisSequence=++requestSequence;
   if(activeController){activeController.abort();activeController=null}
   if(OFFICES[mode].stateRequired&&!$('state').value){currentResult=null;setEmptySummary();render();setStatus('Escolha um estado para ver os resultados','Selecione a unidade da Federação que deseja acompanhar.');return}
   if(waitingForOfficialPublication()){
+    const requestedScope=mode==='pres'?'BR':$('state').value;
+    if(!force&&currentResult&&currentResult.preElection&&currentResult.preElectionOffice===mode&&currentResult.preElectionScope===requestedScope&&Date.now()-preElectionFetchedAt<PRE_ELECTION_REFRESH_INTERVAL)return;
     try{
       setStatus('🔄 Verificando candidaturas do TSE…','Consultando a lista de candidaturas antes da apuração.');
       await loadPreElectionCandidates(thisSequence);
@@ -578,11 +583,11 @@ async function update(){
   }
 }
 Object.entries(states).forEach(([uf,name])=>{const option=document.createElement('option');option.value=uf;option.textContent=name;$('state').append(option)});
-function chooseOffice(nextMode){mode=nextMode;updateHeading();update()}
+function chooseOffice(nextMode){mode=nextMode;updateHeading();update(true)}
 Object.keys(OFFICES).forEach(key=>$(key==='depFed'?'depFed':key==='depState'?'depState':key).onclick=()=>chooseOffice(key));
-$('state').onchange=()=>update();
-$('round').onchange=()=>update();
-$('refresh').onclick=()=>update();
+$('state').onchange=()=>update(true);
+$('round').onchange=()=>update(true);
+$('refresh').onclick=()=>update(true);
 function setActiveNav(name){document.querySelectorAll('.nav-item').forEach(button=>{const active=button.dataset.nav===name;button.classList.toggle('active',active);if(active)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current')})}
 document.querySelectorAll('.nav-item').forEach(button=>button.onclick=()=>{
  const section=button.dataset.nav;
@@ -592,7 +597,7 @@ document.querySelectorAll('.nav-item').forEach(button=>button.onclick=()=>{
  if(section==='results'){setActiveNav(section);$('cards').scrollIntoView({behavior:'smooth',block:'start'});return}
  const details=$('environmentInfo');details.open=true;setActiveNav(section);details.scrollIntoView({behavior:'smooth',block:'center'});
 });
-updateEnvironmentDescription();initStateMap();render();update();setInterval(update,POLL_INTERVAL);
+updateEnvironmentDescription();initStateMap();render();update(true);setInterval(()=>update(false),POLL_INTERVAL);
 
 const SUPABASE_URL='https://spcqtxhtwajsksptecsw.supabase.co';
 const SUPABASE_PUBLIC_KEY='sb_publishable_RaENg-VY7nywNEa_auHayw_789OF4D3';
