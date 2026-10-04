@@ -495,20 +495,55 @@ function makePhotoDirectory(config,selected){
   const template=findArchiveTemplate(config,'ft');
   return template?resolveDirectory(template,makePathVariables(selected,selected.scopeCode)):null
 }
+function buildOfficialFallbackConfig(){
+  const statesForConfig=Object.keys(states).map(uf=>uf.toLowerCase());
+  const stateAbr=statesForConfig.map(uf=>({cd:uf,cp:[
+    {cd:'0003',ds:'Governador'},
+    {cd:'0005',ds:'Senador'},
+    {cd:'0006',ds:'Deputado Federal'},
+    {cd:'0007',ds:uf==='df'?'Deputado Distrital':'Deputado Estadual'}
+  ]}));
+  const federalAbr=[{cd:'br',cp:[{cd:'0001',ds:'Presidente'}]}];
+  const makeElection=(cd,tp,t,cdt2,abr)=>({cd:String(cd),tp,t,cdt2,abr});
+  return {
+    f:'o',
+    pl:[{
+      cd:'3220',c:'ele2026',dt:'04/10/2026',
+      e:[
+        makeElection('6257',8,1,'6258',federalAbr),
+        makeElection('6258',8,2,null,federalAbr),
+        makeElection('6259',1,1,'6260',stateAbr),
+        makeElection('6260',1,2,null,stateAbr)
+      ]
+    }],
+    arq:[
+      {tp:'u',dir:'https://resultados.tse.jus.br/oficial/<ciclo>/<cd_eleicao>/dados/<uf>'},
+      {tp:'ft',dir:'https://resultados.tse.jus.br/oficial/<ciclo>/<cd_eleicao>/fotos/<uf>'}
+    ]
+  };
+}
 async function getElectionConfig(environmentName=environmentKey){
   const selectedEnvironment=TSE_ENVIRONMENTS[environmentName];
   if(electionConfigs[environmentName]&&Date.now()-configFetchedAt[environmentName]<CONFIG_TTL)return electionConfigs[environmentName];
   if(configRequests[environmentName])return configRequests[environmentName];
   configRequests[environmentName]=(async()=>{
     try{
-      const response=await fetch(validateEnvironmentUrl(selectedEnvironment.configUrl,environmentName),{cache:'default',mode:'cors'});
+      const response=await fetch(validateEnvironmentUrl(selectedEnvironment.configUrl,environmentName),{cache:'no-store',mode:'cors'});
       if(!response.ok)throw new Error('HTTP '+response.status+' ao carregar ele-c.json');
       const config=await response.json();
       if(!Array.isArray(config.pl)||!Array.isArray(config.arq))throw new Error('ele-c.json não tem o formato EA11 esperado.');
       if(config.f!==selectedEnvironment.phase)throw new Error('A fase de ele-c.json não corresponde ao ambiente '+selectedEnvironment.label+'.');
       electionConfigs[environmentName]=config;configFetchedAt[environmentName]=Date.now();return config
-    }catch(error){if(!electionConfigs[environmentName])throw error;return electionConfigs[environmentName]}
-    finally{configRequests[environmentName]=null}
+    }catch(error){
+      if(electionConfigs[environmentName])return electionConfigs[environmentName];
+      if(environmentName==='official'){
+        const fallback=buildOfficialFallbackConfig();
+        electionConfigs[environmentName]=fallback;
+        configFetchedAt[environmentName]=Date.now();
+        return fallback
+      }
+      throw error
+    }finally{configRequests[environmentName]=null}
   })();
   return configRequests[environmentName]
 }
