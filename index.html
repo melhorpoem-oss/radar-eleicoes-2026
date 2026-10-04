@@ -381,6 +381,7 @@ function loadOfficialPhoto(article,portrait,fallback,url,name){
 function render(){
   updateHeading();const cards=$('cards');cards.replaceChildren();setEmptySummary();
   if(!currentResult)return;
+  if(currentResult.simulation){return;}
   if(currentResult.preElection){
     const mapped=currentResult.candidates||[];
     if(!mapped.length){cards.innerHTML='<div class="empty">A lista prévia de candidaturas para este cargo/estado ainda não está disponível no arquivo local. Use “Atualizar” para verificar novamente.</div>';return}
@@ -515,6 +516,69 @@ function updateEnvironmentDescription(){
   $('environmentLabel').textContent=phaseName();
   $('environmentHelp').textContent=environment.label+'. Configuração oficial do TSE: '+environment.configUrl+'. Os códigos da eleição e os arquivos são lidos da configuração oficial EA11.';
 }
+
+// ===== MODO DE TESTE / SIMULAÇÃO HISTÓRICA (2022) =====
+// Desligado por padrão. Nunca substitui a consulta oficial do TSE.
+const SIMULATION_DURATION=10*60*1000;
+const SIMULATION_2022={
+  sections:472075, valid:118229719, blank:1964779, nullVotes:3487874,
+  candidates:{'LUIZ INACIO LULA DA SILVA':57259504,'LULA':57259504,'JAIR MESSIAS BOLSONARO':51072345,'BOLSONARO':51072345}
+};
+let simulationActive=false,simulationStartedAt=0,simulationTimer=null;
+function simulationNorm(v){return normalizeText(v).toUpperCase().replace(/[^A-Z0-9 ]/g,'').trim()}
+function simulationValue(finalValue,p){return Math.round(finalValue*Math.pow(Math.max(0,Math.min(1,p)),0.82))}
+function startSimulation(){
+  if(mode!=='pres'){setStatus('🧪 Simulação disponível somente para Presidente','Selecione Presidente para iniciar o teste.');return}
+  simulationActive=true;simulationStartedAt=Date.now();$('simulationBar').hidden=false;
+  $('environmentLabel').textContent='SIMULAÇÃO 2022 • dados históricos';
+  if(simulationTimer)clearInterval(simulationTimer); simulationTimer=setInterval(renderSimulation,1000);
+  renderSimulation();
+}
+function stopSimulation(){
+  simulationActive=false;if(simulationTimer)clearInterval(simulationTimer);simulationTimer=null;
+  $('simulationBar').hidden=true;$('environmentLabel').textContent=phaseName();update(true);
+}
+function renderSimulation(){
+  if(!simulationActive)return;
+  const p=Math.min(1,(Date.now()-simulationStartedAt)/SIMULATION_DURATION);
+  const elapsed=Math.round(p*600),left=Math.max(0,600-elapsed);
+  $('simulationClock').textContent=Math.floor(left/60).toString().padStart(2,'0')+':'+(left%60).toString().padStart(2,'0');
+  const scope=$('state').value||'BR';
+  const candidates=(currentResult&&currentResult.preElection?currentResult.candidates:[]).slice();
+  const totalVotes=simulationValue(SIMULATION_2022.valid,p);
+  const validFinal=SIMULATION_2022.valid;
+  const known=candidates.map(c=>({c,key:simulationNorm(c.name||c.ballotName)}));
+  let assigned=0;
+  const mapped=known.map(({c,key},i)=>{
+    let final=0;
+    if(SIMULATION_2022.candidates[key]) final=SIMULATION_2022.candidates[key];
+    else if(key.includes('LULA')) final=SIMULATION_2022.candidates.LULA;
+    else if(key.includes('BOLSONARO')) final=SIMULATION_2022.candidates.BOLSONARO;
+    else final=Math.max(0,Math.round((validFinal-62331849)/Math.max(1,known.length-2)));
+    assigned+=final;
+    return {...c,votes:simulationValue(final,p),percentage:final?Number((final/validFinal*100).toFixed(2)):0,percentValue:final/validFinal*100};
+  });
+  // Se o conjunto de candidatos de 2026 não contém um dos nomes históricos, redistribui
+  // os votos históricos desse candidato entre os demais candidatos, mantendo a lista atual.
+  const historicalSum=mapped.reduce((a,c)=>a+(SIMULATION_2022.candidates[simulationNorm(c.name||c.ballotName)]||0),0);
+  const remainder=validFinal-historicalSum;
+  if(remainder>0){
+    const others=mapped.filter(c=>!SIMULATION_2022.candidates[simulationNorm(c.name||c.ballotName)]);
+    if(others.length){
+      const each=remainder/others.length;
+      others.forEach(c=>{c.votes+=simulationValue(each,p);c.percentage=Number((c.votes/Math.max(1,totalVotes)*100).toFixed(2));c.percentValue=c.percentage});
+    }
+  }
+  currentResult={simulation:true,selected:{scopeCode:scope.toLowerCase(),photoDir:null},data:{s:{st:simulationValue(SIMULATION_2022.sections,p),pst:Number((p*100).toFixed(2))},v:{vv:totalVotes,vb:simulationValue(SIMULATION_2022.blank,p),vn:simulationValue(SIMULATION_2022.nullVotes,p)},carg:[{cand:mapped.map(c=>({nm:c.name,nm_urna:c.ballotName,sgp:c.party,nr:c.number,vt:c.votes,pv:c.percentage,sqcand:null,sit:c.situation}))}]},simulationCandidates:mapped};
+  const cards=$('cards');cards.replaceChildren();displayTotalSections(scope,{tt:SIMULATION_2022.sections});
+  $('counted').textContent=fmtInteger(currentResult.data.s.st);$('countedPct').textContent=fmtPercent(currentResult.data.s.pst);
+  $('valid').textContent=fmtInteger(currentResult.data.v.vv);$('blank').textContent=fmtInteger(currentResult.data.v.vb);$('nullVotes').textContent=fmtInteger(currentResult.data.v.vn);
+  $('heading').textContent='PRESIDENTE • SIMULAÇÃO 2022';
+  mapped.sort((a,b)=>b.votes-a.votes).forEach(c=>cards.append(makeCard(c,{...currentResult.selected,candidate:c})));
+  setStatus('🧪 SIMULAÇÃO EM ANDAMENTO','Dados históricos do 1º turno de 2022 reproduzidos em 10 minutos • '+Math.round(p*100)+'% da simulação');
+  if(p>=1){clearInterval(simulationTimer);simulationTimer=null;setStatus('🧪 SIMULAÇÃO CONCLUÍDA','Resultado histórico de referência: 118.229.719 votos válidos • TSE 2022.');}
+}
+
 const RESULTS_START=Date.parse('2026-10-04T17:00:00-03:00');
 const PRE_ELECTION_REFRESH_INTERVAL=6*60*60*1000;
 let preElectionFetchedAt=0;
@@ -548,6 +612,7 @@ async function loadPreElectionCandidates(sequence){
   }
 }
 async function update(force=false){
+  if(simulationActive){renderSimulation();return}
   const thisSequence=++requestSequence;
   if(activeController){activeController.abort();activeController=null}
   if(OFFICES[mode].stateRequired&&!$('state').value){currentResult=null;setEmptySummary();render();setStatus('Escolha um estado para ver os resultados','Selecione a unidade da Federação que deseja acompanhar.');return}
@@ -597,7 +662,8 @@ async function update(force=false){
   }
 }
 Object.entries(states).forEach(([uf,name])=>{const option=document.createElement('option');option.value=uf;option.textContent=name;$('state').append(option)});
-function chooseOffice(nextMode){mode=nextMode;updateHeading();update(true)}
+function chooseOffice(nextMode){mode=nextMode;updateHeading();if(simulationActive&&nextMode!=='pres')stopSimulation();update(true)}
+if(!document.getElementById('simulationStart')){const b=document.createElement('button');b.id='simulationStart';b.className='refresh';b.type='button';b.textContent='🧪 Testar simulação 2022 (10 min)';document.querySelector('.environment-card .share-actions').appendChild(b);b.onclick=startSimulation;$('simulationStop').onclick=stopSimulation;}
 Object.keys(OFFICES).forEach(key=>$(key==='depFed'?'depFed':key==='depState'?'depState':key).onclick=()=>chooseOffice(key));
 $('state').onchange=()=>update(true);
 $('round').onchange=()=>update(true);
