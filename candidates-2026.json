@@ -1,20 +1,137 @@
 {
   "source": "Tribunal Superior Eleitoral — candidaturas 2026",
   "sourceUrl": "https://www.tse.jus.br/eleicoes/eleicoes-2026-content/propostas-de-governo-dos-candidatos-ao-cargo-de-presidente-da-republica-eleicoes-2026/planos-de-governo-dos-candidatos-ao-cargo-de-presidente-da-republica-eleicoes-2026",
-  "updatedAt": "2026-10-04T05:42:48.068Z",
+  "updatedAt": "2026-10-04T09:10:49.735Z",
   "candidates": [
-    {"id":"27","office":"president","state":"BR","name":"CLARIANA BARAO","number":"27","party":"DC","situation":"Concorrendo","photo":""},
-    {"id":"21","office":"president","state":"BR","name":"EDMILSON COSTA","number":"21","party":"PCB","situation":"Concorrendo","photo":""},
-    {"id":"70","office":"president","state":"BR","name":"ESCRITOR AUGUSTO CURY","number":"70","party":"AVANTE","situation":"Concorrendo","photo":""},
-    {"id":"22","office":"president","state":"BR","name":"FLAVIO BOLSONARO","number":"22","party":"PL","situation":"Concorrendo","photo":""},
-    {"id":"16","office":"president","state":"BR","name":"HERTZ DIAS","number":"16","party":"PSTU","situation":"Concorrendo","photo":""},
-    {"id":"28","office":"president","state":"BR","name":"LEONARDO AVALANCHE","number":"28","party":"PRTB","situation":"Concorrendo","photo":""},
-    {"id":"13","office":"president","state":"BR","name":"LULA","number":"13","party":"PT","situation":"Concorrendo","photo":""},
-    {"id":"14","office":"president","state":"BR","name":"RENAN SANTOS","number":"14","party":"MISSÃO","situation":"Concorrendo","photo":""},
-    {"id":"55","office":"president","state":"BR","name":"RONALDO CAIADO","number":"55","party":"PSD","situation":"Concorrendo","photo":""},
-    {"id":"29","office":"president","state":"BR","name":"RUI COSTA PIMENTA","number":"29","party":"PCO","situation":"Concorrendo","photo":""},
-    {"id":"80","office":"president","state":"BR","name":"SAMARA","number":"80","party":"UP","situation":"Concorrendo","photo":""},
-    {"id":"35","office":"president","state":"BR","name":"VETERINÁRIO WILSON GRASSI","number":"35","party":"DEMOCRATA","situation":"Concorrendo","photo":""},
-    {"id":"30","office":"president","state":"BR","name":"ZEMA","number":"30","party":"NOVO","situation":"Concorrendo","photo":""}
+    {
+      "id": "27",
+      "office": "president",
+      "state": "BR",
+      "name": "CLARIANA BARAO",
+      "number": "27",
+      "party": "DC",
+      "situation": "Concorrendo",
+      "photo": "./candidate-photos/280002552484.jpeg"
+    },
+    {
+      "id": "21",
+      "office": "president",
+      "state": "BR",
+      "name": "EDMILSON COSTA",
+      "number": "21",
+      "party": "PCB",
+      "situation": "Concorrendo",
+      "photo": "./candidate-photos/280002551975.jpeg"
+    },
+    {
+      "id": "70",
+      "office": "president",
+      "state": "BR",
+      "name": "ESCRITOR AUGUSTO CURY",
+      "number": "70",
+      "party": "AVANTE",
+      "situation": "Concorrendo",
+      "photo": "./candidate-photos/280002551547.jpeg"
+    },
+    {
+      "id": "22",
+      "office": "president",
+      "state": "BR",
+      "name": "FLAVIO BOLSONARO",
+      "number": "22",
+      "party": "PL",
+      "situation": "Concorrendo",
+      "photo": "./candidate-photos/280002551544.jpeg"
+    },
+    {
+      "id": "16",
+      "office": "president",
+      "state": "BR",
+      "name": "HERTZ DIAS",
+      "number": "16",
+      "party": "PSTU",
+      "situation": "Concorrendo",
+      "photo": "./candidate-photos/280002541457.jpeg"
+    },
+    {
+      "id": "28",
+      "office": "president",
+      "state": "BR",
+      "name": "LEONARDO AVALANCHE",
+      "number": "28",
+      "party": "PRTB",
+      "situation": "Concorrendo",
+      "photo": "./candidate-photos/280002554479.jpeg"
+    },
+    {
+      "id": "13",
+      "office": "president",
+      "state": "BR",
+      "name": "LULA",
+      "number": "13",
+      "party": "PT",
+      "situation": "Concorrendo",
+      "photo": "./candidate-photos/280002542548.jpeg"
+    },
+    {
+      "id": "14",
+      "office": "president",
+      "state": "BR",
+      "name": "RENAN SANTOS",
+      "number": "14",
+      "party": "MISSÃO",
+      "situation": "Concorrendo",
+      "photo": "./candidate-photos/280002540694.jpeg"
+    },
+    {
+      "id": "55",
+      "office": "president",
+      "state": "BR",
+      "name": "RONALDO CAIADO",
+      "number": "55",
+      "party": "PSD",
+      "situation": "Concorrendo",
+      "photo": "./candidate-photos/280002551932.jpeg"
+    },
+    {
+      "id": "29",
+      "office": "president",
+      "state": "BR",
+      "name": "RUI COSTA PIMENTA",
+      "number": "29",
+      "party": "PCO",
+      "situation": "Concorrendo",
+      "photo": "./candidate-photos/280002552487.jpeg"
+    },
+    {
+      "id": "80",
+      "office": "president",
+      "state": "BR",
+      "name": "SAMARA",
+      "number": "80",
+      "party": "UP",
+      "situation": "Concorrendo",
+      "photo": "./candidate-photos/280002538811.jpeg"
+    },
+    {
+      "id": "35",
+      "office": "president",
+      "state": "BR",
+      "name": "VETERINÁRIO WILSON GRASSI",
+      "number": "35",
+      "party": "DEMOCRATA",
+      "situation": "Concorrendo",
+      "photo": "./candidate-photos/280002548139.jpeg"
+    },
+    {
+      "id": "30",
+      "office": "president",
+      "state": "BR",
+      "name": "ZEMA",
+      "number": "30",
+      "party": "NOVO",
+      "situation": "Concorrendo",
+      "photo": "./candidate-photos/280002539826.jpeg"
+    }
   ]
 }
