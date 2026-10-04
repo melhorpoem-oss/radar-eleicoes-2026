@@ -467,6 +467,25 @@ function is2026Pleito(pleito){
   const date=String(pleito.dt||'');
   return cycle.includes('2026')||date.includes('/2026');
 }
+function fallbackElectionSelection(round,scopeCode){
+  const targetScope=String(scopeCode||'br').toLowerCase();
+  const office=OFFICES[mode];
+  const stateCodes=Object.keys(states).map(uf=>uf.toLowerCase());
+  const stateScope=stateCodes.includes(targetScope);
+  const isFederal=mode==='pres'&&targetScope==='br';
+  if(round===1){
+    if(isFederal)return {cycle:'ele2026',pleitoCode:'3220',electionCode:'6257',cargoCode:'0001',scopeCode:'br',round};
+    if(stateScope){
+      const cargo={gov:'0003',sen:'0005',depFed:'0006',depState:'0007'}[mode];
+      if(cargo)return {cycle:'ele2026',pleitoCode:'3220',electionCode:'6259',cargoCode:cargo,scopeCode:targetScope,round};
+    }
+  }
+  if(round===2){
+    if(isFederal)return {cycle:'ele2026',pleitoCode:'3220',electionCode:'6258',cargoCode:'0001',scopeCode:'br',round};
+    if(stateScope&&mode==='gov')return {cycle:'ele2026',pleitoCode:'3220',electionCode:'6260',cargoCode:'0003',scopeCode:targetScope,round};
+  }
+  return null;
+}
 function findElection(config,round,scopeCode){
   const office=OFFICES[mode],type=office.electionType,targetScope=(office.stateRequired||mode==='pres')?scopeCode.toLowerCase():'br';
   const entries=getElectionEntries(config).filter(entry=>is2026Pleito(entry.pleito)&&Number(entry.eleicao.tp)===type);
@@ -476,7 +495,15 @@ function findElection(config,round,scopeCode){
     const first=entries.find(entry=>Number(entry.eleicao.t)===1&&hasScope(entry)&&entry.eleicao.cdt2!==undefined&&entry.eleicao.cdt2!==null);
     if(first)match={pleito:first.pleito,eleicao:{...first.eleicao,cd:first.eleicao.cdt2,t:'2'}};
   }
-  if(!match)throw new Error(round===2?'O TSE ainda não publicou a configuração do 2º turno para esta abrangência.':'Não há eleição compatível na configuração ele-c.json.');
+  if(!match){
+    const fallback=fallbackElectionSelection(round,targetScope);
+    if(fallback){
+      if(!fallback.cycle)fallback.cycle='ele2026';
+      if(!fallback.pleitoCode)fallback.pleitoCode='3220';
+      return fallback;
+    }
+    throw new Error(round===2?'O TSE ainda não publicou a configuração do 2º turno para esta abrangência.':'Não há eleição compatível na configuração ele-c.json.');
+  }
   const abr=asArray(match.eleicao.abr).find(item=>String(item.cd).toLowerCase()===targetScope);
   if(!abr)throw new Error('A abrangência solicitada não consta na configuração do TSE.');
   const cargo=asArray(abr.cp).find(item=>office.cargoTerms.some(term=>normalizeText(item.ds).includes(term)));
