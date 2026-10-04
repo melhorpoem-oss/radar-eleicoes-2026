@@ -375,6 +375,11 @@ function initStateMap(){
   path.addEventListener('click',selectState);
   path.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();selectState()}});
  });
+ document.querySelectorAll('#regionSelector button[data-region]').forEach(button=>{
+  const selectRegion=()=>showPresidentRegion(button.dataset.region);
+  button.addEventListener('click',selectRegion);
+  button.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();selectRegion()}});
+ });
  updateStateMapSelection();
 }
 function updateHeading(){
