@@ -581,9 +581,21 @@ async function update(force=false){
     setStatus('🟢 '+electionStatus(data),'Ambiente '+phaseName()+' • '+count+' seções ('+pct+') • Última atualização: '+new Date().toLocaleTimeString('pt-BR'))
   }catch(error){
     if(error.name==='AbortError'||thisSequence!==requestSequence)return;
-    currentResult=null;render();
-    const detail=error.message&&error.message.includes('404')?error.message:'Falha ao ler os arquivos oficiais do TSE. Verifique a conexão e se o CORS permite acesso a este domínio. Detalhe: '+(error.message||'erro de rede');
-    setStatus('⚠️ Dados do TSE indisponíveis', 'Ambiente '+phaseName()+' • Última tentativa: '+new Date().toLocaleTimeString('pt-BR')+' • '+detail)
+    if(currentResult&&currentResult.data){
+      render();
+      setStatus('🟡 Mantendo a última apuração válida','O TSE não respondeu nesta tentativa. O Radar tentará atualizar automaticamente em seguida.');
+    }else{
+      render();
+      setStatus('⚠️ Tentativa falhou — recuperação automática ativa','O Radar fará novas tentativas automaticamente. Última tentativa: '+new Date().toLocaleTimeString('pt-BR')+' • '+(error.message||'erro de rede'));
+    }
+    if(thisSequence===requestSequence){
+      const retryDelays=[3000,10000,20000];
+      retryDelays.forEach((delay,index)=>{
+        setTimeout(()=>{
+          if(thisSequence===requestSequence) update(true);
+        },delay);
+      });
+    }
   }
 }
 Object.entries(states).forEach(([uf,name])=>{const option=document.createElement('option');option.value=uf;option.textContent=name;$('state').append(option)});
