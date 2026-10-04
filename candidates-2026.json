@@ -1,7 +1,7 @@
 {
   "source": "Tribunal Superior Eleitoral — Dados Abertos, Candidatos 2026 (Presidente, Governador, Senador e Deputados)",
   "sourceUrl": "https://dadosabertos.tse.jus.br/dataset/candidatos-2026",
-  "updatedAt": "2026-10-03T16:10:38.443120+00:00",
+  "updatedAt": "2026-10-04T00:06:50.195057+00:00",
   "candidates": [
     {
       "id": "10002532486",
@@ -1474,16 +1474,6 @@
       "photo": "./candidate-photos/20002554417.jpeg"
     },
     {
-      "id": "20002552853",
-      "office": "deputy_federal",
-      "state": "AL",
-      "name": "GERVASIO NETO",
-      "number": "2525",
-      "party": "PRD",
-      "situation": "#NE",
-      "photo": "./candidate-photos/20002552853.jpeg"
-    },
-    {
       "id": "20002538203",
       "office": "deputy_federal",
       "state": "AL",
@@ -1492,6 +1482,16 @@
       "party": "PRD",
       "situation": "#NE",
       "photo": "./candidate-photos/20002538203.jpeg"
+    },
+    {
+      "id": "20002552853",
+      "office": "deputy_federal",
+      "state": "AL",
+      "name": "GERVASIO NETO",
+      "number": "2525",
+      "party": "PRD",
+      "situation": "#NE",
+      "photo": "./candidate-photos/20002552853.jpeg"
     },
     {
       "id": "20002538209",
@@ -2114,16 +2114,6 @@
       "photo": "./candidate-photos/20002554280.jpeg"
     },
     {
-      "id": "20002552855",
-      "office": "deputy_federal",
-      "state": "AL",
-      "name": "HELO BEZERRA",
-      "number": "7777",
-      "party": "SOLIDARIEDADE",
-      "situation": "#NE",
-      "photo": "./candidate-photos/20002552855.jpeg"
-    },
-    {
       "id": "20002538205",
       "office": "deputy_federal",
       "state": "AL",
@@ -2132,6 +2122,16 @@
       "party": "SOLIDARIEDADE",
       "situation": "#NE",
       "photo": "./candidate-photos/20002538205.jpeg"
+    },
+    {
+      "id": "20002552855",
+      "office": "deputy_federal",
+      "state": "AL",
+      "name": "HELO BEZERRA",
+      "number": "7777",
+      "party": "SOLIDARIEDADE",
+      "situation": "#NE",
+      "photo": "./candidate-photos/20002552855.jpeg"
     },
     {
       "id": "20002554446",
@@ -2164,16 +2164,6 @@
       "photo": "./candidate-photos/20002538204.jpeg"
     },
     {
-      "id": "20002538206",
-      "office": "deputy_federal",
-      "state": "AL",
-      "name": "LAU DA CAUSA ANIMAL",
-      "number": "7789",
-      "party": "SOLIDARIEDADE",
-      "situation": "#NE",
-      "photo": "./candidate-photos/20002538206.jpeg"
-    },
-    {
       "id": "20002552856",
       "office": "deputy_federal",
       "state": "AL",
@@ -2182,6 +2172,16 @@
       "party": "SOLIDARIEDADE",
       "situation": "#NE",
       "photo": "./candidate-photos/20002552856.jpeg"
+    },
+    {
+      "id": "20002538206",
+      "office": "deputy_federal",
+      "state": "AL",
+      "name": "LAU DA CAUSA ANIMAL",
+      "number": "7789",
+      "party": "SOLIDARIEDADE",
+      "situation": "#NE",
+      "photo": "./candidate-photos/20002538206.jpeg"
     },
     {
       "id": "20002539459",
@@ -7114,16 +7114,6 @@
       "photo": "./candidate-photos/50002543998.jpeg"
     },
     {
-      "id": "50002544001",
-      "office": "deputy_federal",
-      "state": "BA",
-      "name": "BRUNO ELIAS",
-      "number": "2717",
-      "party": "DC",
-      "situation": "#NE",
-      "photo": "./candidate-photos/50002544001.jpeg"
-    },
-    {
       "id": "50002542554",
       "office": "deputy_federal",
       "state": "BA",
@@ -7132,6 +7122,16 @@
       "party": "DC",
       "situation": "#NE",
       "photo": "./candidate-photos/50002542554.jpeg"
+    },
+    {
+      "id": "50002544001",
+      "office": "deputy_federal",
+      "state": "BA",
+      "name": "BRUNO ELIAS",
+      "number": "2717",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": "./candidate-photos/50002544001.jpeg"
     },
     {
       "id": "50002542551",
@@ -41574,16 +41574,6 @@
       "photo": "./candidate-photos/180002554033.jpeg"
     },
     {
-      "id": "180002553918",
-      "office": "deputy_federal",
-      "state": "PI",
-      "name": "IRMÃ CALINA LOPES",
-      "number": "7013",
-      "party": "AVANTE",
-      "situation": "#NE",
-      "photo": "./candidate-photos/180002553918.jpeg"
-    },
-    {
       "id": "180002552094",
       "office": "deputy_federal",
       "state": "PI",
@@ -41592,6 +41582,16 @@
       "party": "AVANTE",
       "situation": "#NE",
       "photo": "./candidate-photos/180002552094.jpeg"
+    },
+    {
+      "id": "180002553918",
+      "office": "deputy_federal",
+      "state": "PI",
+      "name": "IRMÃ CALINA LOPES",
+      "number": "7013",
+      "party": "AVANTE",
+      "situation": "#NE",
+      "photo": "./candidate-photos/180002553918.jpeg"
     },
     {
       "id": "180002554121",
@@ -89894,16 +89894,6 @@
       "photo": "./candidate-photos/50002543977.jpeg"
     },
     {
-      "id": "50002543993",
-      "office": "deputy_state",
-      "state": "BA",
-      "name": "MARCOS SEGURO",
-      "number": "27123",
-      "party": "DC",
-      "situation": "#NE",
-      "photo": "./candidate-photos/50002543993.jpeg"
-    },
-    {
       "id": "50002550346",
       "office": "deputy_state",
       "state": "BA",
@@ -89912,6 +89902,16 @@
       "party": "DC",
       "situation": "#NE",
       "photo": "./candidate-photos/50002550346.jpeg"
+    },
+    {
+      "id": "50002543993",
+      "office": "deputy_state",
+      "state": "BA",
+      "name": "MARCOS SEGURO",
+      "number": "27123",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": "./candidate-photos/50002543993.jpeg"
     },
     {
       "id": "50002543982",
@@ -89934,16 +89934,6 @@
       "photo": "./candidate-photos/50002543981.jpeg"
     },
     {
-      "id": "50002543972",
-      "office": "deputy_state",
-      "state": "BA",
-      "name": "SARGENTO IGOR MANDACARU",
-      "number": "27190",
-      "party": "DC",
-      "situation": "#NE",
-      "photo": "./candidate-photos/50002543972.jpeg"
-    },
-    {
       "id": "50002550348",
       "office": "deputy_state",
       "state": "BA",
@@ -89952,6 +89942,16 @@
       "party": "DC",
       "situation": "#NE",
       "photo": "./candidate-photos/50002550348.jpeg"
+    },
+    {
+      "id": "50002543972",
+      "office": "deputy_state",
+      "state": "BA",
+      "name": "SARGENTO IGOR MANDACARU",
+      "number": "27190",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": "./candidate-photos/50002543972.jpeg"
     },
     {
       "id": "50002543983",
@@ -89974,16 +89974,6 @@
       "photo": "./candidate-photos/50002543986.jpeg"
     },
     {
-      "id": "50002543979",
-      "office": "deputy_state",
-      "state": "BA",
-      "name": "ARAGUACY COSTA",
-      "number": "27333",
-      "party": "DC",
-      "situation": "#NE",
-      "photo": "./candidate-photos/50002543979.jpeg"
-    },
-    {
       "id": "50002550347",
       "office": "deputy_state",
       "state": "BA",
@@ -89992,6 +89982,16 @@
       "party": "DC",
       "situation": "#NE",
       "photo": "./candidate-photos/50002550347.jpeg"
+    },
+    {
+      "id": "50002543979",
+      "office": "deputy_state",
+      "state": "BA",
+      "name": "ARAGUACY COSTA",
+      "number": "27333",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": "./candidate-photos/50002543979.jpeg"
     },
     {
       "id": "50002543990",
@@ -95242,6 +95242,16 @@
       "party": "MOBILIZA",
       "situation": "#NE",
       "photo": "./candidate-photos/60002535643.jpeg"
+    },
+    {
+      "id": "60002554703",
+      "office": "deputy_state",
+      "state": "CE",
+      "name": "REGINALDO MOREIRA",
+      "number": "33300",
+      "party": "MOBILIZA",
+      "situation": "#NE",
+      "photo": ""
     },
     {
       "id": "60002535615",
@@ -200364,16 +200374,6 @@
       "photo": "./candidate-photos/250002541312.jpeg"
     },
     {
-      "id": "250002553928",
-      "office": "senator",
-      "state": "SP",
-      "name": "GUTO SCHIAVETTO",
-      "number": "144",
-      "party": "MISSÃO",
-      "situation": "#NE",
-      "photo": "./candidate-photos/250002553928.jpeg"
-    },
-    {
       "id": "250002554075",
       "office": "senator",
       "state": "SP",
@@ -200382,6 +200382,16 @@
       "party": "MISSÃO",
       "situation": "#NE",
       "photo": "./candidate-photos/250002554075.jpeg"
+    },
+    {
+      "id": "250002553928",
+      "office": "senator",
+      "state": "SP",
+      "name": "GUTO SCHIAVETTO",
+      "number": "144",
+      "party": "MISSÃO",
+      "situation": "#NE",
+      "photo": "./candidate-photos/250002553928.jpeg"
     },
     {
       "id": "250002541365",
