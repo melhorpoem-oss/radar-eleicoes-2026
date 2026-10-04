@@ -1,12 +1,12 @@
 {
   "source": "Tribunal Superior Eleitoral — Dados Abertos, Candidatos 2026",
   "sourceUrl": "https://dadosabertos.tse.jus.br/dataset/candidatos-2026",
-  "updatedAt": "2026-10-04T13:51:12.675184+00:00",
+  "updatedAt": "2026-10-04T21:17:02.333018+00:00",
   "counts": {
     "deputy_federal": 7803,
     "deputy_state": 11728,
-    "governor": 201,
     "senator": 319,
+    "governor": 201,
     "president": 14
   },
   "candidates": [
@@ -1421,16 +1421,6 @@
       "photo": "./candidate-photos/20002550552.jpeg"
     },
     {
-      "id": "20002552854",
-      "office": "deputy_federal",
-      "state": "AL",
-      "name": "CORONEL IVON",
-      "number": "2500",
-      "party": "PRD",
-      "situation": "#NE",
-      "photo": "./candidate-photos/20002552854.jpeg"
-    },
-    {
       "id": "20002538207",
       "office": "deputy_federal",
       "state": "AL",
@@ -1439,6 +1429,16 @@
       "party": "PRD",
       "situation": "#NE",
       "photo": "./candidate-photos/20002538207.jpeg"
+    },
+    {
+      "id": "20002552854",
+      "office": "deputy_federal",
+      "state": "AL",
+      "name": "CORONEL IVON",
+      "number": "2500",
+      "party": "PRD",
+      "situation": "#NE",
+      "photo": "./candidate-photos/20002552854.jpeg"
     },
     {
       "id": "20002552852",
@@ -1481,16 +1481,6 @@
       "photo": "./candidate-photos/20002554417.jpeg"
     },
     {
-      "id": "20002538203",
-      "office": "deputy_federal",
-      "state": "AL",
-      "name": "GERVASIO NETO",
-      "number": "2525",
-      "party": "PRD",
-      "situation": "#NE",
-      "photo": "./candidate-photos/20002538203.jpeg"
-    },
-    {
       "id": "20002552853",
       "office": "deputy_federal",
       "state": "AL",
@@ -1499,6 +1489,16 @@
       "party": "PRD",
       "situation": "#NE",
       "photo": "./candidate-photos/20002552853.jpeg"
+    },
+    {
+      "id": "20002538203",
+      "office": "deputy_federal",
+      "state": "AL",
+      "name": "GERVASIO NETO",
+      "number": "2525",
+      "party": "PRD",
+      "situation": "#NE",
+      "photo": "./candidate-photos/20002538203.jpeg"
     },
     {
       "id": "20002538209",
@@ -2121,16 +2121,6 @@
       "photo": "./candidate-photos/20002554280.jpeg"
     },
     {
-      "id": "20002538205",
-      "office": "deputy_federal",
-      "state": "AL",
-      "name": "HELO BEZERRA",
-      "number": "7777",
-      "party": "SOLIDARIEDADE",
-      "situation": "#NE",
-      "photo": "./candidate-photos/20002538205.jpeg"
-    },
-    {
       "id": "20002552855",
       "office": "deputy_federal",
       "state": "AL",
@@ -2139,6 +2129,16 @@
       "party": "SOLIDARIEDADE",
       "situation": "#NE",
       "photo": "./candidate-photos/20002552855.jpeg"
+    },
+    {
+      "id": "20002538205",
+      "office": "deputy_federal",
+      "state": "AL",
+      "name": "HELO BEZERRA",
+      "number": "7777",
+      "party": "SOLIDARIEDADE",
+      "situation": "#NE",
+      "photo": "./candidate-photos/20002538205.jpeg"
     },
     {
       "id": "20002554446",
@@ -7121,16 +7121,6 @@
       "photo": "./candidate-photos/50002543998.jpeg"
     },
     {
-      "id": "50002542554",
-      "office": "deputy_federal",
-      "state": "BA",
-      "name": "BRUNO ELIAS",
-      "number": "2717",
-      "party": "DC",
-      "situation": "#NE",
-      "photo": "./candidate-photos/50002542554.jpeg"
-    },
-    {
       "id": "50002544001",
       "office": "deputy_federal",
       "state": "BA",
@@ -7141,14 +7131,14 @@
       "photo": "./candidate-photos/50002544001.jpeg"
     },
     {
-      "id": "50002542551",
+      "id": "50002542554",
       "office": "deputy_federal",
       "state": "BA",
-      "name": "MARLI LIMA",
-      "number": "2727",
+      "name": "BRUNO ELIAS",
+      "number": "2717",
       "party": "DC",
       "situation": "#NE",
-      "photo": "./candidate-photos/50002542551.jpeg"
+      "photo": "./candidate-photos/50002542554.jpeg"
     },
     {
       "id": "50002543999",
@@ -7159,6 +7149,16 @@
       "party": "DC",
       "situation": "#NE",
       "photo": "./candidate-photos/50002543999.jpeg"
+    },
+    {
+      "id": "50002542551",
+      "office": "deputy_federal",
+      "state": "BA",
+      "name": "MARLI LIMA",
+      "number": "2727",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": "./candidate-photos/50002542551.jpeg"
     },
     {
       "id": "50002544000",
@@ -10671,16 +10671,6 @@
       "photo": "./candidate-photos/60002542212.jpeg"
     },
     {
-      "id": "60002554044",
-      "office": "deputy_federal",
-      "state": "CE",
-      "name": "JESSICA MACAXEIRA",
-      "number": "1544",
-      "party": "MDB",
-      "situation": "#NE",
-      "photo": "./candidate-photos/60002554044.jpeg"
-    },
-    {
       "id": "60002542440",
       "office": "deputy_federal",
       "state": "CE",
@@ -10689,6 +10679,16 @@
       "party": "MDB",
       "situation": "#NE",
       "photo": "./candidate-photos/60002542440.jpeg"
+    },
+    {
+      "id": "60002554044",
+      "office": "deputy_federal",
+      "state": "CE",
+      "name": "JESSICA MACAXEIRA",
+      "number": "1544",
+      "party": "MDB",
+      "situation": "#NE",
+      "photo": "./candidate-photos/60002554044.jpeg"
     },
     {
       "id": "60002542447",
@@ -89981,16 +89981,6 @@
       "photo": "./candidate-photos/50002543986.jpeg"
     },
     {
-      "id": "50002543979",
-      "office": "deputy_state",
-      "state": "BA",
-      "name": "ARAGUACY COSTA",
-      "number": "27333",
-      "party": "DC",
-      "situation": "#NE",
-      "photo": "./candidate-photos/50002543979.jpeg"
-    },
-    {
       "id": "50002550347",
       "office": "deputy_state",
       "state": "BA",
@@ -89999,6 +89989,16 @@
       "party": "DC",
       "situation": "#NE",
       "photo": "./candidate-photos/50002550347.jpeg"
+    },
+    {
+      "id": "50002543979",
+      "office": "deputy_state",
+      "state": "BA",
+      "name": "ARAGUACY COSTA",
+      "number": "27333",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": "./candidate-photos/50002543979.jpeg"
     },
     {
       "id": "50002543990",
@@ -125771,16 +125771,6 @@
       "photo": "./candidate-photos/120002553248.jpeg"
     },
     {
-      "id": "120002554432",
-      "office": "deputy_state",
-      "state": "MS",
-      "name": "JOSIEL MACHADO",
-      "number": "29029",
-      "party": "PCO",
-      "situation": "#NE",
-      "photo": "./candidate-photos/120002554432.jpeg"
-    },
-    {
       "id": "120002552683",
       "office": "deputy_state",
       "state": "MS",
@@ -125789,6 +125779,16 @@
       "party": "PCO",
       "situation": "#NE",
       "photo": "./candidate-photos/120002552683.jpeg"
+    },
+    {
+      "id": "120002554432",
+      "office": "deputy_state",
+      "state": "MS",
+      "name": "JOSIEL MACHADO",
+      "number": "29029",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": "./candidate-photos/120002554432.jpeg"
     },
     {
       "id": "120002552684",
@@ -200381,16 +200381,6 @@
       "photo": "./candidate-photos/250002541312.jpeg"
     },
     {
-      "id": "250002554075",
-      "office": "senator",
-      "state": "SP",
-      "name": "GUTO SCHIAVETTO",
-      "number": "144",
-      "party": "MISSÃO",
-      "situation": "#NE",
-      "photo": "./candidate-photos/250002554075.jpeg"
-    },
-    {
       "id": "250002553928",
       "office": "senator",
       "state": "SP",
@@ -200399,6 +200389,16 @@
       "party": "MISSÃO",
       "situation": "#NE",
       "photo": "./candidate-photos/250002553928.jpeg"
+    },
+    {
+      "id": "250002554075",
+      "office": "senator",
+      "state": "SP",
+      "name": "GUTO SCHIAVETTO",
+      "number": "144",
+      "party": "MISSÃO",
+      "situation": "#NE",
+      "photo": "./candidate-photos/250002554075.jpeg"
     },
     {
       "id": "250002541365",
