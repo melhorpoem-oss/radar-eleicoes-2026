@@ -280,7 +280,37 @@
           ><tspan x="-9.19" y="5.03">A</tspan><tspan x="-0.97" y="5.03">L</tspan></text></g><g transform="matrix(1 0 0 1 803.96 468.02)"><text
             id="SE"
             ?hidden=
-          ><tspan x="-8.53" y="5.03">S</tspan><tspan x="-0.77" y="5.03">E</tspan></text></g></svg></div><p class="brazil-map-note">Mapa das Unidades da Federação • formas geográficas: projeto brazil-map (BSD-2-Clause)</p></section><div class="status"><div><b id="status">⏳ Aguardando dados do TSE</b><small id="updated">Última atualização: —</small></div><button class="refresh" id="refresh">↻ Atualizar</button></div><div class="summary"><div class="stat"><strong id="counted">—</strong><span>Seções totalizadas</span></div><div class="stat"><strong id="countedPct">—</strong><span>Seções totalizadas (%)</span></div><div class="stat"><strong id="valid">—</strong><span>Votos válidos</span></div><div class="stat"><strong id="blank">—</strong><span>Votos brancos</span></div><div class="stat"><strong id="nullVotes">—</strong><span>Votos nulos</span></div></div><h2 id="heading">PRESIDENTE</h2><div id="cards" class="cards"></div><p class="foot">Dados e fotos são carregados dos arquivos oficiais do Tribunal Superior Eleitoral. Campos ainda indisponíveis são mostrados como “—”.</p><details id="environmentInfo"><summary>⚙️ Ambiente de dados</summary><p id="environmentHelp" style="font-size:12px"></p></details></section><section id="researchPanel" hidden><h2>Pesquisa informal de intenção de voto</h2><p class="foot" style="margin-top:0">Esta enquete é independente do TSE, não é pesquisa eleitoral registrada e não representa necessariamente a opinião da população. Cada toque registra um voto; é possível votar quantas vezes quiser.</p><div class="tabs poll-office"><button id="pollPresident" class="active" type="button">Presidente</button><button id="pollGovernor" type="button">Governador</button></div><label id="pollStateLabel" for="pollState" style="display:none;font-size:12px;font-weight:750;margin:12px 2px 6px">Estado</label><select id="pollState" aria-label="Estado da pesquisa" style="display:none"><option value="">Escolha um estado</option></select><div class="status" style="margin-top:14px"><div><b id="pollStatus">Carregando candidatos do TSE…</b><small id="pollUpdated">Votos compartilhados • atualização automática</small></div><button class="refresh" id="pollRefresh" type="button">↻ Atualizar</button></div><div id="pollCards" class="cards"></div></section></main><nav class="bottom-nav" aria-label="Navegação principal"><button class="nav-item active" data-nav="home" type="button" aria-current="page"><span class="nav-icon" aria-hidden="true">⌂</span><span>Início</span></button><button class="nav-item" data-nav="results" type="button"><span class="nav-icon" aria-hidden="true">▥</span><span>Resultados</span></button><button class="nav-item" data-nav="research" type="button"><span class="nav-icon" aria-hidden="true">⌕</span><span>Pesquisas</span></button><button class="nav-item" data-nav="settings" type="button"><span class="nav-icon" aria-hidden="true">⚙</span><span>Configuração</span></button></nav><script>
+          ><tspan x="-8.53" y="5.03">S</tspan><tspan x="-0.77" y="5.03">E</tspan></text></g></svg></div><p class="brazil-map-note">Mapa das Unidades da Federação • formas geográficas: projeto brazil-map (BSD-2-Clause)</p></section><div class="status"><div><b id="status">⏳ Aguardando dados do TSE</b><small id="updated">Última atualização: —</small></div><button class="refresh" id="refresh">↻ Atualizar</button></div><div class="summary"><div class="stat"><strong id="counted">—</strong><span>Seções totalizadas</span></div><div class="stat"><strong id="countedPct">—</strong><span>Seções totalizadas (%)</span></div><div class="stat"><strong id="valid">—</strong><span>Votos válidos</span></div><div class="stat"><strong id="blank">—</strong><span>Votos brancos</span></div><div class="stat"><strong id="nullVotes">—</strong><span>Votos nulos</span></div></div><h2 id="heading">PRESIDENTE</h2><div id="cards" class="cards"></div><p class="foot">Dados e fotos são carregados dos arquivos oficiais do Tribunal Superior Eleitoral. Campos ainda indisponíveis são mostrados como “—”.</p><details id="environmentInfo"><summary>⚙️ Ambiente de dados</summary><p id="environmentHelp" style="font-size:12px"></p></details></section><section id="researchPanel" hidden>
+<h2>Pesquisas</h2>
+<p class="foot" style="margin-top:0">Consulte pesquisas eleitorais registradas no TSE ou participe da enquete informal do Radar. Pesquisas de opinião não são resultados oficiais da apuração.</p>
+<div class="tabs poll-office" style="margin-bottom:12px">
+<button id="researchOfficial" class="active" type="button">Pesquisas oficiais</button>
+<button id="researchInformal" type="button">Pesquisa informal</button>
+</div>
+<section id="officialResearchPanel">
+<div class="tabs poll-office">
+<button id="officialPollPresident" class="active" type="button">Presidente</button>
+<button id="officialPollGovernor" type="button">Governador</button>
+</div>
+<label id="officialPollStateLabel" for="officialPollState" style="display:none;font-size:12px;font-weight:750;margin:12px 2px 6px">Estado</label>
+<select id="officialPollState" aria-label="Estado da pesquisa oficial" style="display:none"><option value="">Escolha um estado</option></select>
+<div class="status" style="margin-top:14px">
+<div><b id="officialPollStatus">Carregando última pesquisa registrada…</b><small id="officialPollUpdated">Dados da pesquisa • registro no TSE</small></div>
+<button class="refresh" id="officialPollRefresh" type="button">↻ Atualizar</button>
+</div>
+<div id="officialPollMeta" class="environment-card"></div>
+<div id="officialPollChart" style="background:#fff;border-radius:18px;padding:16px;margin-bottom:14px;box-shadow:0 3px 10px #172a3210"></div>
+<div id="officialPollCards" class="cards"></div>
+</section>
+<section id="informalResearchPanel" hidden>
+<h2>Pesquisa informal de intenção de voto</h2>
+<p class="foot" style="margin-top:0">Esta enquete é independente do TSE, não é pesquisa eleitoral registrada e não representa necessariamente a opinião da população. Cada toque registra um voto; é possível votar quantas vezes quiser.</p>
+<div class="tabs poll-office"><button id="pollPresident" class="active" type="button">Presidente</button><button id="pollGovernor" type="button">Governador</button></div>
+<label id="pollStateLabel" for="pollState" style="display:none;font-size:12px;font-weight:750;margin:12px 2px 6px">Estado</label>
+<select id="pollState" aria-label="Estado da pesquisa" style="display:none"><option value="">Escolha um estado</option></select>
+<div class="status" style="margin-top:14px"><div><b id="pollStatus">Carregando candidatos do TSE…</b><small id="pollUpdated">Votos compartilhados • atualização automática</small></div><button class="refresh" id="pollRefresh" type="button">↻ Atualizar</button></div>
+<div id="pollCards" class="cards"></div>
+</section></section></main><nav class="bottom-nav" aria-label="Navegação principal"><button class="nav-item active" data-nav="home" type="button" aria-current="page"><span class="nav-icon" aria-hidden="true">⌂</span><span>Início</span></button><button class="nav-item" data-nav="results" type="button"><span class="nav-icon" aria-hidden="true">▥</span><span>Resultados</span></button><button class="nav-item" data-nav="research" type="button"><span class="nav-icon" aria-hidden="true">⌕</span><span>Pesquisas</span></button><button class="nav-item" data-nav="settings" type="button"><span class="nav-icon" aria-hidden="true">⚙</span><span>Configuração</span></button></nav><script>
 // O aplicativo consulta exclusivamente o ambiente oficial do TSE.
 const TSE_ENVIRONMENTS={official:{key:'official',label:'TSE oficial • produção',origin:'https://resultados.tse.jus.br',pathPrefix:'/oficial/',base:'https://resultados.tse.jus.br',ambiente:'oficial',phase:'o',configUrl:'https://resultados.tse.jus.br/oficial/ele2026/comum/config/ele-c.json'}};
 const states={AC:'Acre',AL:'Alagoas',AP:'Amapá',AM:'Amazonas',BA:'Bahia',CE:'Ceará',DF:'Distrito Federal',ES:'Espírito Santo',GO:'Goiás',MA:'Maranhão',MT:'Mato Grosso',MS:'Mato Grosso do Sul',MG:'Minas Gerais',PA:'Pará',PB:'Paraíba',PR:'Paraná',PE:'Pernambuco',PI:'Piauí',RJ:'Rio de Janeiro',RN:'Rio Grande do Norte',RS:'Rio Grande do Sul',RO:'Rondônia',RR:'Roraima',SC:'Santa Catarina',SP:'São Paulo',SE:'Sergipe',TO:'Tocantins'};
@@ -615,6 +645,69 @@ document.querySelectorAll('.nav-item').forEach(button=>button.onclick=()=>{
 });
 updateEnvironmentDescription();initStateMap();render();update(true);setInterval(()=>update(false),POLL_INTERVAL);
 
+const OFFICIAL_POLL_DATA={
+  president:{
+    institute:'Datafolha',date:'03/10/2026',field:'03/10/2026',sample:'4.006 entrevistados',margin:'± 2 p.p.',confidence:'95%',register:'BR-01708/2026',
+    candidates:[
+      {name:'Lula',party:'PT',number:'13',value:45},
+      {name:'Flávio Bolsonaro',party:'PL',number:'22',value:42},
+      {name:'Ronaldo Caiado',party:'PSD',number:'55',value:4},
+      {name:'Renan Santos',party:'Missão',number:'30',value:3},
+      {name:'Augusto Cury',party:'Avante',number:'70',value:3},
+      {name:'Romeu Zema',party:'Novo',number:'30',value:1}
+    ],
+    note:'Percentuais de votos válidos. Brancos, nulos e indecisos são excluídos deste recorte.'
+  },
+  governor:{
+    BA:{
+      institute:'AtlasIntel / A TARDE',date:'03/10/2026',field:'27/09/2026 a 02/10/2026',sample:'2.199 entrevistados',margin:'± 2 p.p.',confidence:'95%',register:'BA-05671/2026',
+      candidates:[
+        {name:'Jerônimo Rodrigues',party:'PT',number:'13',value:51.5},
+        {name:'ACM Neto',party:'União Brasil',number:'44',value:47.4},
+        {name:'Ariel Capistrano',party:'DC',number:'27',value:0.4},
+        {name:'Ronaldo Mansur',party:'PSOL',number:'50',value:0.4},
+        {name:'Maria Bona',party:'PCO',number:'29',value:0.3},
+        {name:'Aroldo Félix',party:'UP',number:'16',value:0}
+      ],
+      note:'Percentuais de votos válidos. Pesquisa registrada no TSE sob BA-05671/2026.'
+    }
+  }
+};
+let officialPollOffice='president';
+function setOfficialPollStatus(message,detail){$('officialPollStatus').textContent=message;$('officialPollUpdated').textContent=detail||''}
+function renderOfficialPoll(){
+  const state=officialPollOffice==='governor' ? $('officialPollState').value : 'BR';
+  const data=officialPollOffice==='president' ? OFFICIAL_POLL_DATA.president : (OFFICIAL_POLL_DATA.governor[state]||null);
+  if(officialPollOffice==='governor'&&!state){
+    setOfficialPollStatus('Escolha um estado para consultar a última pesquisa.','As pesquisas oficiais são exibidas por unidade da Federação.');
+    $('officialPollMeta').innerHTML='';$('officialPollChart').innerHTML='';$('officialPollCards').replaceChildren();return;
+  }
+  if(!data){
+    setOfficialPollStatus('Pesquisa oficial ainda não cadastrada para este estado.','O Radar não exibirá percentual inventado. Escolha outra UF ou aguarde uma pesquisa registrada.');
+    $('officialPollMeta').innerHTML='';$('officialPollChart').innerHTML='';$('officialPollCards').replaceChildren();return;
+  }
+  setOfficialPollStatus('🟢 Última pesquisa registrada encontrada',data.institute+' • divulgação em '+data.date+' • registro TSE '+data.register);
+  $('officialPollMeta').innerHTML='<b>'+data.institute+' — '+data.date+'</b><p style="font-size:12px;color:#65767c;margin:8px 0 0">Campo: '+data.field+' • '+data.sample+' • margem de erro '+data.margin+' • confiança '+data.confidence+'</p><p style="font-size:12px;color:#65767c;margin:7px 0 0">'+data.note+'</p>';
+  const max=Math.max(...data.candidates.map(x=>x.value),1);
+  $('officialPollChart').innerHTML='<h3 style="margin:0 0 14px;font-size:16px">Gráfico — votos válidos</h3>'+data.candidates.map(x=>'<div style="margin:0 0 12px"><div style="display:flex;justify-content:space-between;gap:8px;font-size:12px;font-weight:750;margin-bottom:5px"><span>'+x.name+'</span><b>'+x.value.toLocaleString('pt-BR',{maximumFractionDigits:1})+'%</b></div><div style="height:10px;background:#e9eeee;border-radius:99px;overflow:hidden"><div style="height:100%;width:'+Math.max(0,x.value/max*100)+'%;background:#009e82;border-radius:99px"></div></div></div>').join('');
+  $('officialPollCards').replaceChildren(...data.candidates.map(x=>{
+    const card=document.createElement('article');card.className='candidate';
+    const portrait=document.createElement('div');portrait.className='portrait';portrait.style.setProperty('--pct',Math.max(0,Math.min(100,x.value))+'%');
+    const fb=document.createElement('div');fb.className='fallback';fb.textContent=initials(x.name);portrait.append(fb);
+    const title=document.createElement('h3');title.textContent=x.name;
+    const party=document.createElement('p');party.className='party';party.textContent=(x.party?' '+x.party:'')+(x.number?' • Nº '+x.number:'');
+    const pct=document.createElement('div');pct.className='pct';pct.textContent=x.value.toLocaleString('pt-BR',{maximumFractionDigits:1})+'%';
+    const label=document.createElement('div');label.className='votes';label.textContent='votos válidos';
+    card.append(portrait,title,party,pct,label);return card;
+  }));
+}
+function setResearchMode(mode){
+  const official=mode==='official';
+  $('researchOfficial').classList.toggle('active',official);$('researchInformal').classList.toggle('active',!official);
+  $('officialResearchPanel').hidden=!official;$('informalResearchPanel').hidden=official;
+  if(official)renderOfficialPoll();
+  else loadResearchPoll();
+}
 const SUPABASE_URL='https://spcqtxhtwajsksptecsw.supabase.co';
 const SUPABASE_PUBLIC_KEY='sb_publishable_RaENg-VY7nywNEa_auHayw_789OF4D3';
 let pollDataUpdatedAt='';
@@ -624,7 +717,7 @@ function setAppView(view){
  const research=view==='research';
  $('officialPanel').hidden=research;$('officialHeaderTabs').hidden=research;$('researchPanel').hidden=!research;
  setActiveNav(research?'research':'results');
- if(research)loadResearchPoll()
+ if(research)setResearchMode('official');
 }
 function setPollStatus(message,detail){$('pollStatus').textContent=message;$('pollUpdated').textContent=detail||''}
 function supabaseHeaders(){return {'apikey':SUPABASE_PUBLIC_KEY,'Authorization':'Bearer '+SUPABASE_PUBLIC_KEY,'Content-Type':'application/json'}}
@@ -693,15 +786,19 @@ function setPollOffice(office){
  const governor=office==='governor';$('pollState').style.display=governor?'block':'none';$('pollStateLabel').style.display=governor?'block':'none';
  loadResearchPoll()
 }
-Object.entries(states).forEach(([uf,name])=>{const option=document.createElement('option');option.value=uf;option.textContent=name;$('pollState').append(option)});
+Object.entries(states).forEach(([uf,name])=>{let option=document.createElement('option');option.value=uf;option.textContent=name;$('pollState').append(option);option=document.createElement('option');option.value=uf;option.textContent=name;$('officialPollState').append(option)});$('officialPollState').value='BA';
 const SHARE_URL='https://melhorpoem-oss.github.io/radar-eleicoes-2026/';
 function announceShareStatus(message){$('shareStatus').textContent=message;clearTimeout(announceShareStatus.timer);announceShareStatus.timer=setTimeout(()=>$('shareStatus').textContent='',3500)}
 async function copyShareLink(){try{if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(SHARE_URL);else{const field=document.createElement('textarea');field.value=SHARE_URL;field.style.position='fixed';field.style.opacity='0';document.body.append(field);field.select();const copied=document.execCommand('copy');field.remove();if(!copied)throw new Error('Cópia indisponível')}}catch(error){announceShareStatus('Não foi possível copiar automaticamente.');return}announceShareStatus('Link copiado! Você já pode colar no WhatsApp ou em outra rede.')}
 $('shareButton').onclick=async()=>{if(!navigator.share){await copyShareLink();return}try{await navigator.share({title:'Radar das Eleições 2026',text:'Acompanhe os resultados eleitorais oficiais do TSE e a pesquisa informal.',url:SHARE_URL})}catch(error){if(error.name!=='AbortError')announceShareStatus('Não foi possível abrir as opções de compartilhamento.')}};
 
+$('researchOfficial').onclick=()=>setResearchMode('official');$('researchInformal').onclick=()=>setResearchMode('informal');
+$('officialPollPresident').onclick=()=>{officialPollOffice='president';$('officialPollPresident').classList.add('active');$('officialPollGovernor').classList.remove('active');$('officialPollState').style.display='none';$('officialPollStateLabel').style.display='none';renderOfficialPoll()};
+$('officialPollGovernor').onclick=()=>{officialPollOffice='governor';$('officialPollGovernor').classList.add('active');$('officialPollPresident').classList.remove('active');$('officialPollState').style.display='block';$('officialPollStateLabel').style.display='block';if(!$('officialPollState').value)$('officialPollState').value='BA';renderOfficialPoll()};
+$('officialPollState').onchange=()=>renderOfficialPoll();$('officialPollRefresh').onclick=()=>renderOfficialPoll();
 $('pollPresident').onclick=()=>setPollOffice('president');$('pollGovernor').onclick=()=>setPollOffice('governor');
 $('pollState').onchange=()=>loadResearchPoll();$('pollRefresh').onclick=()=>loadResearchPoll();
-setInterval(()=>{if(!$('researchPanel').hidden)loadResearchPoll()},15000);
+setInterval(()=>{if(!$('researchPanel').hidden){if(!$('officialResearchPanel').hidden)renderOfficialPoll();else loadResearchPoll()}},15000);
 
 if('serviceWorker'in navigator&&location.protocol==='https:')navigator.serviceWorker.register('./sw.js').catch(()=>{});
 </script></body></html>
