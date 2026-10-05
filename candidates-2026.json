@@ -1,7 +1,7 @@
 {
   "source": "Tribunal Superior Eleitoral — Dados Abertos, Candidatos 2026",
   "sourceUrl": "https://dadosabertos.tse.jus.br/dataset/candidatos-2026",
-  "updatedAt": "2026-10-05T12:45:59.559217+00:00",
+  "updatedAt": "2026-10-05T18:43:55.737045+00:00",
   "counts": {
     "deputy_federal": 7803,
     "deputy_state": 11728,
@@ -1421,16 +1421,6 @@
       "photo": "./candidate-photos/20002550552.jpeg"
     },
     {
-      "id": "20002538207",
-      "office": "deputy_federal",
-      "state": "AL",
-      "name": "CORONEL IVON",
-      "number": "2500",
-      "party": "PRD",
-      "situation": "#NE",
-      "photo": "./candidate-photos/20002538207.jpeg"
-    },
-    {
       "id": "20002552854",
       "office": "deputy_federal",
       "state": "AL",
@@ -1441,14 +1431,14 @@
       "photo": "./candidate-photos/20002552854.jpeg"
     },
     {
-      "id": "20002552852",
+      "id": "20002538207",
       "office": "deputy_federal",
       "state": "AL",
-      "name": "EUCENIA VIEIRA",
-      "number": "2512",
+      "name": "CORONEL IVON",
+      "number": "2500",
       "party": "PRD",
       "situation": "#NE",
-      "photo": "./candidate-photos/20002552852.jpeg"
+      "photo": "./candidate-photos/20002538207.jpeg"
     },
     {
       "id": "20002538211",
@@ -1459,6 +1449,16 @@
       "party": "PRD",
       "situation": "#NE",
       "photo": "./candidate-photos/20002538211.jpeg"
+    },
+    {
+      "id": "20002552852",
+      "office": "deputy_federal",
+      "state": "AL",
+      "name": "EUCENIA VIEIRA",
+      "number": "2512",
+      "party": "PRD",
+      "situation": "#NE",
+      "photo": "./candidate-photos/20002552852.jpeg"
     },
     {
       "id": "20002538208",
@@ -7141,16 +7141,6 @@
       "photo": "./candidate-photos/50002542554.jpeg"
     },
     {
-      "id": "50002543999",
-      "office": "deputy_federal",
-      "state": "BA",
-      "name": "MARLI LIMA",
-      "number": "2727",
-      "party": "DC",
-      "situation": "#NE",
-      "photo": "./candidate-photos/50002543999.jpeg"
-    },
-    {
       "id": "50002542551",
       "office": "deputy_federal",
       "state": "BA",
@@ -7159,6 +7149,16 @@
       "party": "DC",
       "situation": "#NE",
       "photo": "./candidate-photos/50002542551.jpeg"
+    },
+    {
+      "id": "50002543999",
+      "office": "deputy_federal",
+      "state": "BA",
+      "name": "MARLI LIMA",
+      "number": "2727",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": "./candidate-photos/50002543999.jpeg"
     },
     {
       "id": "50002544000",
@@ -41621,16 +41621,6 @@
       "photo": "./candidate-photos/180002548563.jpeg"
     },
     {
-      "id": "180002552093",
-      "office": "deputy_federal",
-      "state": "PI",
-      "name": "ALINE NASCIMENTO",
-      "number": "7077",
-      "party": "AVANTE",
-      "situation": "#NE",
-      "photo": "./candidate-photos/180002552093.jpeg"
-    },
-    {
       "id": "180002553917",
       "office": "deputy_federal",
       "state": "PI",
@@ -41639,6 +41629,16 @@
       "party": "AVANTE",
       "situation": "#NE",
       "photo": "./candidate-photos/180002553917.jpeg"
+    },
+    {
+      "id": "180002552093",
+      "office": "deputy_federal",
+      "state": "PI",
+      "name": "ALINE NASCIMENTO",
+      "number": "7077",
+      "party": "AVANTE",
+      "situation": "#NE",
+      "photo": "./candidate-photos/180002552093.jpeg"
     },
     {
       "id": "180002552095",
@@ -89901,16 +89901,6 @@
       "photo": "./candidate-photos/50002543977.jpeg"
     },
     {
-      "id": "50002543993",
-      "office": "deputy_state",
-      "state": "BA",
-      "name": "MARCOS SEGURO",
-      "number": "27123",
-      "party": "DC",
-      "situation": "#NE",
-      "photo": "./candidate-photos/50002543993.jpeg"
-    },
-    {
       "id": "50002550346",
       "office": "deputy_state",
       "state": "BA",
@@ -89919,6 +89909,16 @@
       "party": "DC",
       "situation": "#NE",
       "photo": "./candidate-photos/50002550346.jpeg"
+    },
+    {
+      "id": "50002543993",
+      "office": "deputy_state",
+      "state": "BA",
+      "name": "MARCOS SEGURO",
+      "number": "27123",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": "./candidate-photos/50002543993.jpeg"
     },
     {
       "id": "50002543982",
@@ -200381,16 +200381,6 @@
       "photo": "./candidate-photos/250002541312.jpeg"
     },
     {
-      "id": "250002553928",
-      "office": "senator",
-      "state": "SP",
-      "name": "GUTO SCHIAVETTO",
-      "number": "144",
-      "party": "MISSÃO",
-      "situation": "#NE",
-      "photo": "./candidate-photos/250002553928.jpeg"
-    },
-    {
       "id": "250002554075",
       "office": "senator",
       "state": "SP",
@@ -200399,6 +200389,16 @@
       "party": "MISSÃO",
       "situation": "#NE",
       "photo": "./candidate-photos/250002554075.jpeg"
+    },
+    {
+      "id": "250002553928",
+      "office": "senator",
+      "state": "SP",
+      "name": "GUTO SCHIAVETTO",
+      "number": "144",
+      "party": "MISSÃO",
+      "situation": "#NE",
+      "photo": "./candidate-photos/250002553928.jpeg"
     },
     {
       "id": "250002541365",
