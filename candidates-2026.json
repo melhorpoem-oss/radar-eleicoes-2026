@@ -1,7 +1,7 @@
 {
   "source": "Tribunal Superior Eleitoral — Dados Abertos, Candidatos 2026",
   "sourceUrl": "https://dadosabertos.tse.jus.br/dataset/candidatos-2026",
-  "updatedAt": "2026-10-09T12:44:36.598959+00:00",
+  "updatedAt": "2026-10-09T18:42:00.562191+00:00",
   "counts": {
     "deputy_federal": 7803,
     "deputy_state": 11728,
@@ -1441,16 +1441,6 @@
       "photo": "./candidate-photos/20002538207.jpeg"
     },
     {
-      "id": "20002552852",
-      "office": "deputy_federal",
-      "state": "AL",
-      "name": "EUCENIA VIEIRA",
-      "number": "2512",
-      "party": "PRD",
-      "situation": "#NE",
-      "photo": "./candidate-photos/20002552852.jpeg"
-    },
-    {
       "id": "20002538211",
       "office": "deputy_federal",
       "state": "AL",
@@ -1459,6 +1449,16 @@
       "party": "PRD",
       "situation": "#NE",
       "photo": "./candidate-photos/20002538211.jpeg"
+    },
+    {
+      "id": "20002552852",
+      "office": "deputy_federal",
+      "state": "AL",
+      "name": "EUCENIA VIEIRA",
+      "number": "2512",
+      "party": "PRD",
+      "situation": "#NE",
+      "photo": "./candidate-photos/20002552852.jpeg"
     },
     {
       "id": "20002538208",
@@ -1481,16 +1481,6 @@
       "photo": "./candidate-photos/20002554417.jpeg"
     },
     {
-      "id": "20002552853",
-      "office": "deputy_federal",
-      "state": "AL",
-      "name": "GERVASIO NETO",
-      "number": "2525",
-      "party": "PRD",
-      "situation": "#NE",
-      "photo": "./candidate-photos/20002552853.jpeg"
-    },
-    {
       "id": "20002538203",
       "office": "deputy_federal",
       "state": "AL",
@@ -1499,6 +1489,16 @@
       "party": "PRD",
       "situation": "#NE",
       "photo": "./candidate-photos/20002538203.jpeg"
+    },
+    {
+      "id": "20002552853",
+      "office": "deputy_federal",
+      "state": "AL",
+      "name": "GERVASIO NETO",
+      "number": "2525",
+      "party": "PRD",
+      "situation": "#NE",
+      "photo": "./candidate-photos/20002552853.jpeg"
     },
     {
       "id": "20002538209",
@@ -2121,16 +2121,6 @@
       "photo": "./candidate-photos/20002554280.jpeg"
     },
     {
-      "id": "20002538205",
-      "office": "deputy_federal",
-      "state": "AL",
-      "name": "HELO BEZERRA",
-      "number": "7777",
-      "party": "SOLIDARIEDADE",
-      "situation": "#NE",
-      "photo": "./candidate-photos/20002538205.jpeg"
-    },
-    {
       "id": "20002552855",
       "office": "deputy_federal",
       "state": "AL",
@@ -2139,6 +2129,16 @@
       "party": "SOLIDARIEDADE",
       "situation": "#NE",
       "photo": "./candidate-photos/20002552855.jpeg"
+    },
+    {
+      "id": "20002538205",
+      "office": "deputy_federal",
+      "state": "AL",
+      "name": "HELO BEZERRA",
+      "number": "7777",
+      "party": "SOLIDARIEDADE",
+      "situation": "#NE",
+      "photo": "./candidate-photos/20002538205.jpeg"
     },
     {
       "id": "20002554446",
@@ -89941,16 +89941,6 @@
       "photo": "./candidate-photos/50002543981.jpeg"
     },
     {
-      "id": "50002550348",
-      "office": "deputy_state",
-      "state": "BA",
-      "name": "SARGENTO IGOR MANDACARU",
-      "number": "27190",
-      "party": "DC",
-      "situation": "#NE",
-      "photo": "./candidate-photos/50002550348.jpeg"
-    },
-    {
       "id": "50002543972",
       "office": "deputy_state",
       "state": "BA",
@@ -89959,6 +89949,16 @@
       "party": "DC",
       "situation": "#NE",
       "photo": "./candidate-photos/50002543972.jpeg"
+    },
+    {
+      "id": "50002550348",
+      "office": "deputy_state",
+      "state": "BA",
+      "name": "SARGENTO IGOR MANDACARU",
+      "number": "27190",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": "./candidate-photos/50002550348.jpeg"
     },
     {
       "id": "50002543983",
@@ -89981,16 +89981,6 @@
       "photo": "./candidate-photos/50002543986.jpeg"
     },
     {
-      "id": "50002550347",
-      "office": "deputy_state",
-      "state": "BA",
-      "name": "ARAGUACY COSTA",
-      "number": "27333",
-      "party": "DC",
-      "situation": "#NE",
-      "photo": "./candidate-photos/50002550347.jpeg"
-    },
-    {
       "id": "50002543979",
       "office": "deputy_state",
       "state": "BA",
@@ -89999,6 +89989,16 @@
       "party": "DC",
       "situation": "#NE",
       "photo": "./candidate-photos/50002543979.jpeg"
+    },
+    {
+      "id": "50002550347",
+      "office": "deputy_state",
+      "state": "BA",
+      "name": "ARAGUACY COSTA",
+      "number": "27333",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": "./candidate-photos/50002550347.jpeg"
     },
     {
       "id": "50002543990",
@@ -134681,16 +134681,6 @@
       "photo": "./candidate-photos/150002540246.jpeg"
     },
     {
-      "id": "150002554321",
-      "office": "deputy_state",
-      "state": "PB",
-      "name": "TERESA CARNEIRO FELICIANO",
-      "number": "15556",
-      "party": "MDB",
-      "situation": "#NE",
-      "photo": "./candidate-photos/150002554321.jpeg"
-    },
-    {
       "id": "150002540226",
       "office": "deputy_state",
       "state": "PB",
@@ -134699,6 +134689,16 @@
       "party": "MDB",
       "situation": "#NE",
       "photo": "./candidate-photos/150002540226.jpeg"
+    },
+    {
+      "id": "150002554321",
+      "office": "deputy_state",
+      "state": "PB",
+      "name": "TERESA CARNEIRO FELICIANO",
+      "number": "15556",
+      "party": "MDB",
+      "situation": "#NE",
+      "photo": "./candidate-photos/150002554321.jpeg"
     },
     {
       "id": "150002540236",
