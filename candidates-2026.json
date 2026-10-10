@@ -1,7 +1,7 @@
 {
   "source": "Tribunal Superior Eleitoral — Dados Abertos, Candidatos 2026",
   "sourceUrl": "https://dadosabertos.tse.jus.br/dataset/candidatos-2026",
-  "updatedAt": "2026-10-10T12:43:18.247850+00:00",
+  "updatedAt": "2026-10-10T18:40:49.981838+00:00",
   "counts": {
     "deputy_federal": 7803,
     "deputy_state": 11728,
@@ -1421,16 +1421,6 @@
       "photo": "./candidate-photos/20002550552.jpeg"
     },
     {
-      "id": "20002552854",
-      "office": "deputy_federal",
-      "state": "AL",
-      "name": "CORONEL IVON",
-      "number": "2500",
-      "party": "PRD",
-      "situation": "#NE",
-      "photo": "./candidate-photos/20002552854.jpeg"
-    },
-    {
       "id": "20002538207",
       "office": "deputy_federal",
       "state": "AL",
@@ -1439,6 +1429,16 @@
       "party": "PRD",
       "situation": "#NE",
       "photo": "./candidate-photos/20002538207.jpeg"
+    },
+    {
+      "id": "20002552854",
+      "office": "deputy_federal",
+      "state": "AL",
+      "name": "CORONEL IVON",
+      "number": "2500",
+      "party": "PRD",
+      "situation": "#NE",
+      "photo": "./candidate-photos/20002552854.jpeg"
     },
     {
       "id": "20002538211",
@@ -7121,16 +7121,6 @@
       "photo": "./candidate-photos/50002543998.jpeg"
     },
     {
-      "id": "50002544001",
-      "office": "deputy_federal",
-      "state": "BA",
-      "name": "BRUNO ELIAS",
-      "number": "2717",
-      "party": "DC",
-      "situation": "#NE",
-      "photo": "./candidate-photos/50002544001.jpeg"
-    },
-    {
       "id": "50002542554",
       "office": "deputy_federal",
       "state": "BA",
@@ -7139,6 +7129,16 @@
       "party": "DC",
       "situation": "#NE",
       "photo": "./candidate-photos/50002542554.jpeg"
+    },
+    {
+      "id": "50002544001",
+      "office": "deputy_federal",
+      "state": "BA",
+      "name": "BRUNO ELIAS",
+      "number": "2717",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": "./candidate-photos/50002544001.jpeg"
     },
     {
       "id": "50002542551",
@@ -89981,16 +89981,6 @@
       "photo": "./candidate-photos/50002543986.jpeg"
     },
     {
-      "id": "50002543979",
-      "office": "deputy_state",
-      "state": "BA",
-      "name": "ARAGUACY COSTA",
-      "number": "27333",
-      "party": "DC",
-      "situation": "#NE",
-      "photo": "./candidate-photos/50002543979.jpeg"
-    },
-    {
       "id": "50002550347",
       "office": "deputy_state",
       "state": "BA",
@@ -89999,6 +89989,16 @@
       "party": "DC",
       "situation": "#NE",
       "photo": "./candidate-photos/50002550347.jpeg"
+    },
+    {
+      "id": "50002543979",
+      "office": "deputy_state",
+      "state": "BA",
+      "name": "ARAGUACY COSTA",
+      "number": "27333",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": "./candidate-photos/50002543979.jpeg"
     },
     {
       "id": "50002543990",
