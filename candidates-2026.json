@@ -1,12 +1,12 @@
 {
   "source": "Tribunal Superior Eleitoral — Dados Abertos, Candidatos 2026",
   "sourceUrl": "https://dadosabertos.tse.jus.br/dataset/candidatos-2026",
-  "updatedAt": "2026-10-14T19:02:58.832852+00:00",
+  "updatedAt": "2026-10-15T01:02:24.834131+00:00",
   "counts": {
-    "deputy_federal": 7803,
     "deputy_state": 11728,
-    "senator": 319,
+    "deputy_federal": 7803,
     "governor": 201,
+    "senator": 319,
     "president": 14
   },
   "candidates": [
@@ -1421,16 +1421,6 @@
       "photo": "./candidate-photos/20002550552.jpeg"
     },
     {
-      "id": "20002552854",
-      "office": "deputy_federal",
-      "state": "AL",
-      "name": "CORONEL IVON",
-      "number": "2500",
-      "party": "PRD",
-      "situation": "#NE",
-      "photo": "./candidate-photos/20002552854.jpeg"
-    },
-    {
       "id": "20002538207",
       "office": "deputy_federal",
       "state": "AL",
@@ -1439,6 +1429,16 @@
       "party": "PRD",
       "situation": "#NE",
       "photo": "./candidate-photos/20002538207.jpeg"
+    },
+    {
+      "id": "20002552854",
+      "office": "deputy_federal",
+      "state": "AL",
+      "name": "CORONEL IVON",
+      "number": "2500",
+      "party": "PRD",
+      "situation": "#NE",
+      "photo": "./candidate-photos/20002552854.jpeg"
     },
     {
       "id": "20002538211",
@@ -2121,16 +2121,6 @@
       "photo": "./candidate-photos/20002554280.jpeg"
     },
     {
-      "id": "20002538205",
-      "office": "deputy_federal",
-      "state": "AL",
-      "name": "HELO BEZERRA",
-      "number": "7777",
-      "party": "SOLIDARIEDADE",
-      "situation": "#NE",
-      "photo": "./candidate-photos/20002538205.jpeg"
-    },
-    {
       "id": "20002552855",
       "office": "deputy_federal",
       "state": "AL",
@@ -2139,6 +2129,16 @@
       "party": "SOLIDARIEDADE",
       "situation": "#NE",
       "photo": "./candidate-photos/20002552855.jpeg"
+    },
+    {
+      "id": "20002538205",
+      "office": "deputy_federal",
+      "state": "AL",
+      "name": "HELO BEZERRA",
+      "number": "7777",
+      "party": "SOLIDARIEDADE",
+      "situation": "#NE",
+      "photo": "./candidate-photos/20002538205.jpeg"
     },
     {
       "id": "20002554446",
@@ -7141,16 +7141,6 @@
       "photo": "./candidate-photos/50002544001.jpeg"
     },
     {
-      "id": "50002542551",
-      "office": "deputy_federal",
-      "state": "BA",
-      "name": "MARLI LIMA",
-      "number": "2727",
-      "party": "DC",
-      "situation": "#NE",
-      "photo": "./candidate-photos/50002542551.jpeg"
-    },
-    {
       "id": "50002543999",
       "office": "deputy_federal",
       "state": "BA",
@@ -7159,6 +7149,16 @@
       "party": "DC",
       "situation": "#NE",
       "photo": "./candidate-photos/50002543999.jpeg"
+    },
+    {
+      "id": "50002542551",
+      "office": "deputy_federal",
+      "state": "BA",
+      "name": "MARLI LIMA",
+      "number": "2727",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": "./candidate-photos/50002542551.jpeg"
     },
     {
       "id": "50002544000",
@@ -10671,16 +10671,6 @@
       "photo": "./candidate-photos/60002542212.jpeg"
     },
     {
-      "id": "60002542440",
-      "office": "deputy_federal",
-      "state": "CE",
-      "name": "JESSICA MACAXEIRA",
-      "number": "1544",
-      "party": "MDB",
-      "situation": "#NE",
-      "photo": "./candidate-photos/60002542440.jpeg"
-    },
-    {
       "id": "60002554044",
       "office": "deputy_federal",
       "state": "CE",
@@ -10689,6 +10679,16 @@
       "party": "MDB",
       "situation": "#NE",
       "photo": "./candidate-photos/60002554044.jpeg"
+    },
+    {
+      "id": "60002542440",
+      "office": "deputy_federal",
+      "state": "CE",
+      "name": "JESSICA MACAXEIRA",
+      "number": "1544",
+      "party": "MDB",
+      "situation": "#NE",
+      "photo": "./candidate-photos/60002542440.jpeg"
     },
     {
       "id": "60002542447",
@@ -41581,16 +41581,6 @@
       "photo": "./candidate-photos/180002554033.jpeg"
     },
     {
-      "id": "180002553918",
-      "office": "deputy_federal",
-      "state": "PI",
-      "name": "IRMÃ CALINA LOPES",
-      "number": "7013",
-      "party": "AVANTE",
-      "situation": "#NE",
-      "photo": "./candidate-photos/180002553918.jpeg"
-    },
-    {
       "id": "180002552094",
       "office": "deputy_federal",
       "state": "PI",
@@ -41599,6 +41589,16 @@
       "party": "AVANTE",
       "situation": "#NE",
       "photo": "./candidate-photos/180002552094.jpeg"
+    },
+    {
+      "id": "180002553918",
+      "office": "deputy_federal",
+      "state": "PI",
+      "name": "IRMÃ CALINA LOPES",
+      "number": "7013",
+      "party": "AVANTE",
+      "situation": "#NE",
+      "photo": "./candidate-photos/180002553918.jpeg"
     },
     {
       "id": "180002554121",
@@ -89901,16 +89901,6 @@
       "photo": "./candidate-photos/50002543977.jpeg"
     },
     {
-      "id": "50002543993",
-      "office": "deputy_state",
-      "state": "BA",
-      "name": "MARCOS SEGURO",
-      "number": "27123",
-      "party": "DC",
-      "situation": "#NE",
-      "photo": "./candidate-photos/50002543993.jpeg"
-    },
-    {
       "id": "50002550346",
       "office": "deputy_state",
       "state": "BA",
@@ -89919,6 +89909,16 @@
       "party": "DC",
       "situation": "#NE",
       "photo": "./candidate-photos/50002550346.jpeg"
+    },
+    {
+      "id": "50002543993",
+      "office": "deputy_state",
+      "state": "BA",
+      "name": "MARCOS SEGURO",
+      "number": "27123",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": "./candidate-photos/50002543993.jpeg"
     },
     {
       "id": "50002543982",
@@ -89981,16 +89981,6 @@
       "photo": "./candidate-photos/50002543986.jpeg"
     },
     {
-      "id": "50002550347",
-      "office": "deputy_state",
-      "state": "BA",
-      "name": "ARAGUACY COSTA",
-      "number": "27333",
-      "party": "DC",
-      "situation": "#NE",
-      "photo": "./candidate-photos/50002550347.jpeg"
-    },
-    {
       "id": "50002543979",
       "office": "deputy_state",
       "state": "BA",
@@ -89999,6 +89989,16 @@
       "party": "DC",
       "situation": "#NE",
       "photo": "./candidate-photos/50002543979.jpeg"
+    },
+    {
+      "id": "50002550347",
+      "office": "deputy_state",
+      "state": "BA",
+      "name": "ARAGUACY COSTA",
+      "number": "27333",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": "./candidate-photos/50002550347.jpeg"
     },
     {
       "id": "50002543990",
@@ -134681,16 +134681,6 @@
       "photo": "./candidate-photos/150002540246.jpeg"
     },
     {
-      "id": "150002554321",
-      "office": "deputy_state",
-      "state": "PB",
-      "name": "TERESA CARNEIRO FELICIANO",
-      "number": "15556",
-      "party": "MDB",
-      "situation": "#NE",
-      "photo": "./candidate-photos/150002554321.jpeg"
-    },
-    {
       "id": "150002540226",
       "office": "deputy_state",
       "state": "PB",
@@ -134699,6 +134689,16 @@
       "party": "MDB",
       "situation": "#NE",
       "photo": "./candidate-photos/150002540226.jpeg"
+    },
+    {
+      "id": "150002554321",
+      "office": "deputy_state",
+      "state": "PB",
+      "name": "TERESA CARNEIRO FELICIANO",
+      "number": "15556",
+      "party": "MDB",
+      "situation": "#NE",
+      "photo": "./candidate-photos/150002554321.jpeg"
     },
     {
       "id": "150002540236",
