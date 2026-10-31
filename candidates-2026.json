@@ -1,12 +1,12 @@
 {
   "source": "Tribunal Superior Eleitoral — Dados Abertos, Candidatos 2026",
   "sourceUrl": "https://dadosabertos.tse.jus.br/dataset/candidatos-2026",
-  "updatedAt": "2026-10-31T05:58:20.262481+00:00",
+  "updatedAt": "2026-10-31T12:49:43.323062+00:00",
   "counts": {
     "deputy_state": 11728,
     "deputy_federal": 7803,
-    "senator": 319,
     "governor": 201,
+    "senator": 319,
     "president": 14
   },
   "candidates": [
@@ -1481,16 +1481,6 @@
       "photo": "./candidate-photos/20002554417.jpeg"
     },
     {
-      "id": "20002538203",
-      "office": "deputy_federal",
-      "state": "AL",
-      "name": "GERVASIO NETO",
-      "number": "2525",
-      "party": "PRD",
-      "situation": "#NE",
-      "photo": "./candidate-photos/20002538203.jpeg"
-    },
-    {
       "id": "20002552853",
       "office": "deputy_federal",
       "state": "AL",
@@ -1499,6 +1489,16 @@
       "party": "PRD",
       "situation": "#NE",
       "photo": "./candidate-photos/20002552853.jpeg"
+    },
+    {
+      "id": "20002538203",
+      "office": "deputy_federal",
+      "state": "AL",
+      "name": "GERVASIO NETO",
+      "number": "2525",
+      "party": "PRD",
+      "situation": "#NE",
+      "photo": "./candidate-photos/20002538203.jpeg"
     },
     {
       "id": "20002538209",
@@ -2171,16 +2171,6 @@
       "photo": "./candidate-photos/20002538204.jpeg"
     },
     {
-      "id": "20002538206",
-      "office": "deputy_federal",
-      "state": "AL",
-      "name": "LAU DA CAUSA ANIMAL",
-      "number": "7789",
-      "party": "SOLIDARIEDADE",
-      "situation": "#NE",
-      "photo": "./candidate-photos/20002538206.jpeg"
-    },
-    {
       "id": "20002552856",
       "office": "deputy_federal",
       "state": "AL",
@@ -2189,6 +2179,16 @@
       "party": "SOLIDARIEDADE",
       "situation": "#NE",
       "photo": "./candidate-photos/20002552856.jpeg"
+    },
+    {
+      "id": "20002538206",
+      "office": "deputy_federal",
+      "state": "AL",
+      "name": "LAU DA CAUSA ANIMAL",
+      "number": "7789",
+      "party": "SOLIDARIEDADE",
+      "situation": "#NE",
+      "photo": "./candidate-photos/20002538206.jpeg"
     },
     {
       "id": "20002539459",
@@ -10671,16 +10671,6 @@
       "photo": "./candidate-photos/60002542212.jpeg"
     },
     {
-      "id": "60002542440",
-      "office": "deputy_federal",
-      "state": "CE",
-      "name": "JESSICA MACAXEIRA",
-      "number": "1544",
-      "party": "MDB",
-      "situation": "#NE",
-      "photo": "./candidate-photos/60002542440.jpeg"
-    },
-    {
       "id": "60002554044",
       "office": "deputy_federal",
       "state": "CE",
@@ -10689,6 +10679,16 @@
       "party": "MDB",
       "situation": "#NE",
       "photo": "./candidate-photos/60002554044.jpeg"
+    },
+    {
+      "id": "60002542440",
+      "office": "deputy_federal",
+      "state": "CE",
+      "name": "JESSICA MACAXEIRA",
+      "number": "1544",
+      "party": "MDB",
+      "situation": "#NE",
+      "photo": "./candidate-photos/60002542440.jpeg"
     },
     {
       "id": "60002542447",
@@ -89901,16 +89901,6 @@
       "photo": "./candidate-photos/50002543977.jpeg"
     },
     {
-      "id": "50002543993",
-      "office": "deputy_state",
-      "state": "BA",
-      "name": "MARCOS SEGURO",
-      "number": "27123",
-      "party": "DC",
-      "situation": "#NE",
-      "photo": "./candidate-photos/50002543993.jpeg"
-    },
-    {
       "id": "50002550346",
       "office": "deputy_state",
       "state": "BA",
@@ -89919,6 +89909,16 @@
       "party": "DC",
       "situation": "#NE",
       "photo": "./candidate-photos/50002550346.jpeg"
+    },
+    {
+      "id": "50002543993",
+      "office": "deputy_state",
+      "state": "BA",
+      "name": "MARCOS SEGURO",
+      "number": "27123",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": "./candidate-photos/50002543993.jpeg"
     },
     {
       "id": "50002543982",
@@ -89941,16 +89941,6 @@
       "photo": "./candidate-photos/50002543981.jpeg"
     },
     {
-      "id": "50002550348",
-      "office": "deputy_state",
-      "state": "BA",
-      "name": "SARGENTO IGOR MANDACARU",
-      "number": "27190",
-      "party": "DC",
-      "situation": "#NE",
-      "photo": "./candidate-photos/50002550348.jpeg"
-    },
-    {
       "id": "50002543972",
       "office": "deputy_state",
       "state": "BA",
@@ -89959,6 +89949,16 @@
       "party": "DC",
       "situation": "#NE",
       "photo": "./candidate-photos/50002543972.jpeg"
+    },
+    {
+      "id": "50002550348",
+      "office": "deputy_state",
+      "state": "BA",
+      "name": "SARGENTO IGOR MANDACARU",
+      "number": "27190",
+      "party": "DC",
+      "situation": "#NE",
+      "photo": "./candidate-photos/50002550348.jpeg"
     },
     {
       "id": "50002543983",
@@ -125771,16 +125771,6 @@
       "photo": "./candidate-photos/120002553248.jpeg"
     },
     {
-      "id": "120002552683",
-      "office": "deputy_state",
-      "state": "MS",
-      "name": "JOSIEL MACHADO",
-      "number": "29029",
-      "party": "PCO",
-      "situation": "#NE",
-      "photo": "./candidate-photos/120002552683.jpeg"
-    },
-    {
       "id": "120002554432",
       "office": "deputy_state",
       "state": "MS",
@@ -125789,6 +125779,16 @@
       "party": "PCO",
       "situation": "#NE",
       "photo": "./candidate-photos/120002554432.jpeg"
+    },
+    {
+      "id": "120002552683",
+      "office": "deputy_state",
+      "state": "MS",
+      "name": "JOSIEL MACHADO",
+      "number": "29029",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": "./candidate-photos/120002552683.jpeg"
     },
     {
       "id": "120002552684",
@@ -134681,16 +134681,6 @@
       "photo": "./candidate-photos/150002540246.jpeg"
     },
     {
-      "id": "150002554321",
-      "office": "deputy_state",
-      "state": "PB",
-      "name": "TERESA CARNEIRO FELICIANO",
-      "number": "15556",
-      "party": "MDB",
-      "situation": "#NE",
-      "photo": "./candidate-photos/150002554321.jpeg"
-    },
-    {
       "id": "150002540226",
       "office": "deputy_state",
       "state": "PB",
@@ -134699,6 +134689,16 @@
       "party": "MDB",
       "situation": "#NE",
       "photo": "./candidate-photos/150002540226.jpeg"
+    },
+    {
+      "id": "150002554321",
+      "office": "deputy_state",
+      "state": "PB",
+      "name": "TERESA CARNEIRO FELICIANO",
+      "number": "15556",
+      "party": "MDB",
+      "situation": "#NE",
+      "photo": "./candidate-photos/150002554321.jpeg"
     },
     {
       "id": "150002540236",
