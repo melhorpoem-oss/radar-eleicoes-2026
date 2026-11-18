@@ -1,12 +1,12 @@
 {
   "source": "Tribunal Superior Eleitoral — Dados Abertos, Candidatos 2026",
   "sourceUrl": "https://dadosabertos.tse.jus.br/dataset/candidatos-2026",
-  "updatedAt": "2026-11-17T21:06:39.983239+00:00",
+  "updatedAt": "2026-11-18T07:44:17.661142+00:00",
   "counts": {
-    "deputy_federal": 7803,
     "deputy_state": 11728,
-    "governor": 201,
+    "deputy_federal": 7803,
     "senator": 319,
+    "governor": 201,
     "president": 14
   },
   "candidates": [
@@ -1441,16 +1441,6 @@
       "photo": "./candidate-photos/20002538207.jpeg"
     },
     {
-      "id": "20002538211",
-      "office": "deputy_federal",
-      "state": "AL",
-      "name": "EUCENIA VIEIRA",
-      "number": "2512",
-      "party": "PRD",
-      "situation": "#NE",
-      "photo": "./candidate-photos/20002538211.jpeg"
-    },
-    {
       "id": "20002552852",
       "office": "deputy_federal",
       "state": "AL",
@@ -1459,6 +1449,16 @@
       "party": "PRD",
       "situation": "#NE",
       "photo": "./candidate-photos/20002552852.jpeg"
+    },
+    {
+      "id": "20002538211",
+      "office": "deputy_federal",
+      "state": "AL",
+      "name": "EUCENIA VIEIRA",
+      "number": "2512",
+      "party": "PRD",
+      "situation": "#NE",
+      "photo": "./candidate-photos/20002538211.jpeg"
     },
     {
       "id": "20002538208",
@@ -1481,16 +1481,6 @@
       "photo": "./candidate-photos/20002554417.jpeg"
     },
     {
-      "id": "20002552853",
-      "office": "deputy_federal",
-      "state": "AL",
-      "name": "GERVASIO NETO",
-      "number": "2525",
-      "party": "PRD",
-      "situation": "#NE",
-      "photo": "./candidate-photos/20002552853.jpeg"
-    },
-    {
       "id": "20002538203",
       "office": "deputy_federal",
       "state": "AL",
@@ -1499,6 +1489,16 @@
       "party": "PRD",
       "situation": "#NE",
       "photo": "./candidate-photos/20002538203.jpeg"
+    },
+    {
+      "id": "20002552853",
+      "office": "deputy_federal",
+      "state": "AL",
+      "name": "GERVASIO NETO",
+      "number": "2525",
+      "party": "PRD",
+      "situation": "#NE",
+      "photo": "./candidate-photos/20002552853.jpeg"
     },
     {
       "id": "20002538209",
@@ -41621,16 +41621,6 @@
       "photo": "./candidate-photos/180002548563.jpeg"
     },
     {
-      "id": "180002553917",
-      "office": "deputy_federal",
-      "state": "PI",
-      "name": "ALINE NASCIMENTO",
-      "number": "7077",
-      "party": "AVANTE",
-      "situation": "#NE",
-      "photo": "./candidate-photos/180002553917.jpeg"
-    },
-    {
       "id": "180002552093",
       "office": "deputy_federal",
       "state": "PI",
@@ -41639,6 +41629,16 @@
       "party": "AVANTE",
       "situation": "#NE",
       "photo": "./candidate-photos/180002552093.jpeg"
+    },
+    {
+      "id": "180002553917",
+      "office": "deputy_federal",
+      "state": "PI",
+      "name": "ALINE NASCIMENTO",
+      "number": "7077",
+      "party": "AVANTE",
+      "situation": "#NE",
+      "photo": "./candidate-photos/180002553917.jpeg"
     },
     {
       "id": "180002552095",
@@ -125771,16 +125771,6 @@
       "photo": "./candidate-photos/120002553248.jpeg"
     },
     {
-      "id": "120002552683",
-      "office": "deputy_state",
-      "state": "MS",
-      "name": "JOSIEL MACHADO",
-      "number": "29029",
-      "party": "PCO",
-      "situation": "#NE",
-      "photo": "./candidate-photos/120002552683.jpeg"
-    },
-    {
       "id": "120002554432",
       "office": "deputy_state",
       "state": "MS",
@@ -125789,6 +125779,16 @@
       "party": "PCO",
       "situation": "#NE",
       "photo": "./candidate-photos/120002554432.jpeg"
+    },
+    {
+      "id": "120002552683",
+      "office": "deputy_state",
+      "state": "MS",
+      "name": "JOSIEL MACHADO",
+      "number": "29029",
+      "party": "PCO",
+      "situation": "#NE",
+      "photo": "./candidate-photos/120002552683.jpeg"
     },
     {
       "id": "120002552684",
