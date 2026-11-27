@@ -1,12 +1,12 @@
 {
   "source": "Tribunal Superior Eleitoral — Dados Abertos, Candidatos 2026",
   "sourceUrl": "https://dadosabertos.tse.jus.br/dataset/candidatos-2026",
-  "updatedAt": "2026-11-26T21:44:45.860418+00:00",
+  "updatedAt": "2026-11-27T08:49:56.030914+00:00",
   "counts": {
     "deputy_state": 11728,
     "deputy_federal": 7803,
-    "senator": 319,
     "governor": 201,
+    "senator": 319,
     "president": 14
   },
   "candidates": [
@@ -1421,16 +1421,6 @@
       "photo": "./candidate-photos/20002550552.jpeg"
     },
     {
-      "id": "20002552854",
-      "office": "deputy_federal",
-      "state": "AL",
-      "name": "CORONEL IVON",
-      "number": "2500",
-      "party": "PRD",
-      "situation": "#NE",
-      "photo": "./candidate-photos/20002552854.jpeg"
-    },
-    {
       "id": "20002538207",
       "office": "deputy_federal",
       "state": "AL",
@@ -1441,14 +1431,14 @@
       "photo": "./candidate-photos/20002538207.jpeg"
     },
     {
-      "id": "20002552852",
+      "id": "20002552854",
       "office": "deputy_federal",
       "state": "AL",
-      "name": "EUCENIA VIEIRA",
-      "number": "2512",
+      "name": "CORONEL IVON",
+      "number": "2500",
       "party": "PRD",
       "situation": "#NE",
-      "photo": "./candidate-photos/20002552852.jpeg"
+      "photo": "./candidate-photos/20002552854.jpeg"
     },
     {
       "id": "20002538211",
@@ -1459,6 +1449,16 @@
       "party": "PRD",
       "situation": "#NE",
       "photo": "./candidate-photos/20002538211.jpeg"
+    },
+    {
+      "id": "20002552852",
+      "office": "deputy_federal",
+      "state": "AL",
+      "name": "EUCENIA VIEIRA",
+      "number": "2512",
+      "party": "PRD",
+      "situation": "#NE",
+      "photo": "./candidate-photos/20002552852.jpeg"
     },
     {
       "id": "20002538208",
@@ -2121,16 +2121,6 @@
       "photo": "./candidate-photos/20002554280.jpeg"
     },
     {
-      "id": "20002538205",
-      "office": "deputy_federal",
-      "state": "AL",
-      "name": "HELO BEZERRA",
-      "number": "7777",
-      "party": "SOLIDARIEDADE",
-      "situation": "#NE",
-      "photo": "./candidate-photos/20002538205.jpeg"
-    },
-    {
       "id": "20002552855",
       "office": "deputy_federal",
       "state": "AL",
@@ -2139,6 +2129,16 @@
       "party": "SOLIDARIEDADE",
       "situation": "#NE",
       "photo": "./candidate-photos/20002552855.jpeg"
+    },
+    {
+      "id": "20002538205",
+      "office": "deputy_federal",
+      "state": "AL",
+      "name": "HELO BEZERRA",
+      "number": "7777",
+      "party": "SOLIDARIEDADE",
+      "situation": "#NE",
+      "photo": "./candidate-photos/20002538205.jpeg"
     },
     {
       "id": "20002554446",
@@ -134681,16 +134681,6 @@
       "photo": "./candidate-photos/150002540246.jpeg"
     },
     {
-      "id": "150002554321",
-      "office": "deputy_state",
-      "state": "PB",
-      "name": "TERESA CARNEIRO FELICIANO",
-      "number": "15556",
-      "party": "MDB",
-      "situation": "#NE",
-      "photo": "./candidate-photos/150002554321.jpeg"
-    },
-    {
       "id": "150002540226",
       "office": "deputy_state",
       "state": "PB",
@@ -134699,6 +134689,16 @@
       "party": "MDB",
       "situation": "#NE",
       "photo": "./candidate-photos/150002540226.jpeg"
+    },
+    {
+      "id": "150002554321",
+      "office": "deputy_state",
+      "state": "PB",
+      "name": "TERESA CARNEIRO FELICIANO",
+      "number": "15556",
+      "party": "MDB",
+      "situation": "#NE",
+      "photo": "./candidate-photos/150002554321.jpeg"
     },
     {
       "id": "150002540236",
@@ -200381,16 +200381,6 @@
       "photo": "./candidate-photos/250002541312.jpeg"
     },
     {
-      "id": "250002553928",
-      "office": "senator",
-      "state": "SP",
-      "name": "GUTO SCHIAVETTO",
-      "number": "144",
-      "party": "MISSÃO",
-      "situation": "#NE",
-      "photo": "./candidate-photos/250002553928.jpeg"
-    },
-    {
       "id": "250002554075",
       "office": "senator",
       "state": "SP",
@@ -200399,6 +200389,16 @@
       "party": "MISSÃO",
       "situation": "#NE",
       "photo": "./candidate-photos/250002554075.jpeg"
+    },
+    {
+      "id": "250002553928",
+      "office": "senator",
+      "state": "SP",
+      "name": "GUTO SCHIAVETTO",
+      "number": "144",
+      "party": "MISSÃO",
+      "situation": "#NE",
+      "photo": "./candidate-photos/250002553928.jpeg"
     },
     {
       "id": "250002541365",
